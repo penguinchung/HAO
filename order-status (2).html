@@ -28,54 +28,43 @@
   }
   * { box-sizing: border-box; }
   body{
-    margin:0;
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
     background: var(--bg);
     background-image: radial-gradient(circle at 20% 15%, rgba(255,255,255,0.5), transparent 55%);
-    font-family: 'Noto Sans TC', sans-serif;
-    color: var(--ink);
-    padding: 32px 16px;
+    font-family: 'Noto Sans TC', sans-serif; color: var(--ink); padding: 32px 16px;
   }
-  .app{ width:100%; max-width: 420px; }
+  .app{ width:100%; max-width: 440px; }
   .card{
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    padding: 32px 28px;
-    box-shadow: 0 1px 2px rgba(74,70,63,0.04), 0 12px 28px -18px rgba(74,70,63,0.35);
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 32px 28px; box-shadow: 0 1px 2px rgba(74,70,63,0.04), 0 12px 28px -18px rgba(74,70,63,0.35);
   }
   .top-row{ display:flex; align-items:baseline; justify-content:space-between; margin-bottom: 26px; }
   h1{ font-family: 'Noto Serif TC', serif; font-weight: 600; font-size: 21px; margin: 0; letter-spacing: 0.02em; }
   .switch-link{
-    background:none; border:none; color: var(--ink-soft);
-    font-family: 'Noto Sans TC', sans-serif; font-size: 13px; cursor:pointer;
-    padding: 4px 0; border-bottom: 1px solid transparent;
+    background:none; border:none; color: var(--ink-soft); font-family: 'Noto Sans TC', sans-serif;
+    font-size: 13px; cursor:pointer; padding: 4px 0; border-bottom: 1px solid transparent;
   }
   .switch-link:hover{ color: var(--blue-deep); border-bottom-color: var(--blue-deep); }
   label{ display:block; font-size: 13px; color: var(--ink-soft); margin-bottom: 8px; }
-  input[type=text], input[type=password]{
-    width:100%; padding: 13px 14px; font-size: 16px;
-    font-family: 'Noto Sans TC', sans-serif;
-    border: 1px solid var(--line); border-radius: 10px;
-    background: var(--surface-raised); color: var(--ink);
-    outline: none; transition: border-color .15s ease;
+  input[type=text], input[type=password], input[type=datetime-local]{
+    width:100%; padding: 13px 14px; font-size: 15px; font-family: 'Noto Sans TC', sans-serif;
+    border: 1px solid var(--line); border-radius: 10px; background: var(--surface-raised);
+    color: var(--ink); outline: none; transition: border-color .15s ease;
   }
   input:focus{ border-color: var(--blue); }
   .btn{
-    margin-top: 12px; width:100%; padding: 13px; font-size: 15px;
-    font-family: 'Noto Sans TC', sans-serif; font-weight: 500;
-    border: none; border-radius: 10px; background: var(--blue-deep);
+    margin-top: 12px; width:100%; padding: 13px; font-size: 15px; font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 500; border: none; border-radius: 10px; background: var(--blue-deep);
     color: #f4f1ea; cursor:pointer; transition: background .15s ease, transform .1s ease;
   }
   .btn:hover{ background: #4d6270; }
   .btn:active{ transform: scale(0.99); }
-  .btn.small{ width:auto; padding: 9px 16px; font-size: 13px; margin-top:0; }
+  .btn.small{ width:auto; padding: 8px 14px; font-size: 12.5px; margin-top:0; }
+  .btn.outline{ background: transparent; border: 1px solid var(--line); color: var(--ink); }
+  .btn.outline:hover{ background: var(--surface-raised); }
   .result{
-    margin-top: 22px; padding: 20px; border-radius: 12px;
-    background: var(--surface-raised); border: 1px solid var(--line); display:none;
+    margin-top: 22px; padding: 20px; border-radius: 12px; background: var(--surface-raised);
+    border: 1px solid var(--line); display:none;
   }
   .result.show{ display:block; animation: fade .25s ease; }
   @keyframes fade{ from{opacity:0; transform:translateY(4px);} to{opacity:1; transform:translateY(0);} }
@@ -89,31 +78,39 @@
   .status-text.done{ color: var(--done); }
   .meta{ margin-top: 10px; font-size: 12.5px; color: var(--ink-soft); }
   .not-found{
-    margin-top: 22px; padding: 18px 20px; border-radius: 12px;
-    background: var(--surface-raised); border: 1px dashed var(--line);
-    color: var(--ink-soft); font-size: 14px; display:none;
+    margin-top: 22px; padding: 18px 20px; border-radius: 12px; background: var(--surface-raised);
+    border: 1px dashed var(--line); color: var(--ink-soft); font-size: 14px; display:none;
   }
   .not-found.show{ display:block; }
-  .staff-add{ display:flex; gap: 8px; margin-bottom: 20px; }
-  .staff-add input:nth-child(1){ flex:1.3; }
-  .staff-add input:nth-child(2){ flex:0.8; }
-  .list{ display:flex; flex-direction: column; gap: 10px; max-height: 420px; overflow-y:auto; }
-  .item{
-    display:flex; align-items:center; justify-content:space-between;
-    padding: 13px 14px; background: var(--surface-raised);
-    border: 1px solid var(--line); border-radius: 10px;
+  .field-row{ margin-bottom: 16px; }
+  .chips{ display:flex; flex-wrap:wrap; gap: 6px; margin-bottom: 8px; }
+  .chip{
+    border: 1px solid var(--line); background: var(--surface-raised); color: var(--ink-soft);
+    font-size: 12px; padding: 6px 11px; border-radius: 999px; cursor:pointer; transition: all .12s ease;
   }
+  .chip:hover{ border-color: var(--blue); color: var(--blue-deep); }
+  .staff-add{ padding: 16px; background: var(--surface-raised); border: 1px solid var(--line); border-radius: 12px; margin-bottom: 20px; }
+  .staff-add-row{ display:flex; gap: 8px; margin-bottom: 12px; }
+  .staff-add-row input{ flex:1; }
+  .list{ display:flex; flex-direction: column; gap: 10px; max-height: 440px; overflow-y:auto; }
+  .item{ padding: 13px 14px; background: var(--surface-raised); border: 1px solid var(--line); border-radius: 10px; }
+  .item-top{ display:flex; align-items:center; justify-content:space-between; }
   .item-left{ display:flex; align-items:center; gap:10px; min-width:0; }
   .item-num{ font-family:'Noto Serif TC', serif; font-size:15px; flex-shrink:0; }
   .pill{ font-size: 12px; padding: 3px 10px; border-radius: 999px; flex-shrink:0; }
   .pill.wip{ background: var(--wip-bg); color: var(--wip); }
   .pill.done{ background: var(--done-bg); color: var(--done); }
-  .item-actions{ display:flex; gap:6px; }
+  .item-actions{ display:flex; gap:4px; flex-shrink:0; }
   .icon-btn{
     border:none; background:none; cursor:pointer; color: var(--ink-soft);
-    font-size: 13px; padding: 6px 8px; border-radius: 8px;
+    font-size: 12.5px; padding: 6px 7px; border-radius: 8px; white-space:nowrap;
   }
   .icon-btn:hover{ background: var(--line); color: var(--ink); }
+  .item-eta{ font-size: 12.5px; color: var(--ink-soft); margin-top: 8px; }
+  .edit-panel{ margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--line); display:none; }
+  .edit-panel.show{ display:block; }
+  .edit-actions{ display:flex; gap:8px; margin-top:8px; }
+  .edit-actions .btn{ margin-top:0; }
   .empty{ text-align:center; color: var(--ink-soft); font-size: 14px; padding: 30px 0; }
   .hint{ font-size: 12px; color: var(--ink-soft); margin-top: 18px; text-align:center; }
   .hint.err{ color: var(--err); }
@@ -131,10 +128,14 @@
         <h1>取件進度查詢</h1>
         <button class="switch-link" onclick="showStaffLogin()">店家後台</button>
       </div>
-      <label for="queryInput">請輸入您的單號</label>
-      <input type="text" id="queryInput" placeholder="例如 A1023" autocomplete="off">
-      <label for="queryPhone3" style="margin-top:14px;">手機末三碼</label>
-      <input type="text" id="queryPhone3" placeholder="例如 888" maxlength="3" inputmode="numeric" autocomplete="off">
+      <div class="field-row">
+        <label for="queryInput">請輸入您的單號</label>
+        <input type="text" id="queryInput" placeholder="例如 A1023" autocomplete="off">
+      </div>
+      <div class="field-row">
+        <label for="queryPhone3">手機末三碼</label>
+        <input type="text" id="queryPhone3" placeholder="例如 888" maxlength="3" inputmode="numeric" autocomplete="off">
+      </div>
       <button class="btn" onclick="queryOrder()">查詢進度</button>
 
       <div class="result" id="resultBox">
@@ -166,11 +167,25 @@
         <h1>店家後台</h1>
         <button class="switch-link" onclick="showCustomer()">返回查詢頁</button>
       </div>
+
       <div class="staff-add">
-        <input type="text" id="newOrderInput" placeholder="單號">
-        <input type="text" id="newPhone3Input" placeholder="末三碼" maxlength="3" inputmode="numeric">
-        <button class="btn small" onclick="addOrder()">新增</button>
+        <div class="staff-add-row">
+          <input type="text" id="newOrderInput" placeholder="單號">
+          <input type="text" id="newPhone3Input" placeholder="末三碼" maxlength="3" inputmode="numeric">
+        </div>
+        <label>預計完成時間(可快速選,或自行指定)</label>
+        <div class="chips">
+          <span class="chip" onclick="quickPick('newEta', 30)">30分鐘後</span>
+          <span class="chip" onclick="quickPick('newEta', 60)">1小時後</span>
+          <span class="chip" onclick="quickPick('newEta', 120)">2小時後</span>
+          <span class="chip" onclick="quickPick('newEta', 180)">3小時後</span>
+          <span class="chip" onclick="quickPickToday('newEta', 18, 0)">今天18:00</span>
+          <span class="chip" onclick="quickPickTomorrow('newEta', 10, 0)">明天10:00</span>
+        </div>
+        <input type="datetime-local" id="newEta" style="margin-bottom:12px;">
+        <button class="btn" onclick="addOrder()" style="margin-top:0;">新增單號</button>
       </div>
+
       <div class="list" id="orderList"></div>
       <div class="hint" id="syncHint">即時同步中</div>
     </div>
@@ -193,25 +208,47 @@ const firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
-const COLLECTION = 'order_status'; // 獨立 collection,不會跟其他系統互相干擾
+const COLLECTION = 'order_status';
 
 let ordersCache = {};
 let customerUnsub = null;
 let staffUnsub = null;
+let editingNum = null;
 
+// ---------- 時間輔助 ----------
+function toDatetimeLocalValue(date){
+  const pad = n => String(n).padStart(2,'0');
+  return date.getFullYear()+'-'+pad(date.getMonth()+1)+'-'+pad(date.getDate())+'T'+pad(date.getHours())+':'+pad(date.getMinutes());
+}
+function quickPick(inputId, minutesFromNow){
+  const d = new Date(Date.now() + minutesFromNow*60000);
+  document.getElementById(inputId).value = toDatetimeLocalValue(d);
+}
+function quickPickToday(inputId, h, m){
+  const d = new Date();
+  d.setHours(h, m, 0, 0);
+  document.getElementById(inputId).value = toDatetimeLocalValue(d);
+}
+function quickPickTomorrow(inputId, h, m){
+  const d = new Date();
+  d.setDate(d.getDate()+1);
+  d.setHours(h, m, 0, 0);
+  document.getElementById(inputId).value = toDatetimeLocalValue(d);
+}
 function formatTime(ts){
-  if(!ts) return '剛剛';
+  if(!ts) return '';
   const d = ts.toDate ? ts.toDate() : new Date(ts);
-  return d.getFullYear()+'/'+String(d.getMonth()+1).padStart(2,'0')+'/'+String(d.getDate()).padStart(2,'0')+' '+String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0');
+  const pad = n => String(n).padStart(2,'0');
+  return (d.getMonth()+1)+'/'+d.getDate()+' '+pad(d.getHours())+':'+pad(d.getMinutes());
 }
 
+// ---------- 畫面切換 ----------
 function showStaffLogin(){
   document.getElementById('customerView').style.display = 'none';
   document.getElementById('staffLogin').style.display = 'block';
   document.getElementById('pinInput').value = '';
   document.getElementById('pinError').classList.remove('show');
 }
-
 function checkPin(){
   const val = document.getElementById('pinInput').value.trim();
   if(val === STAFF_PIN){
@@ -222,7 +259,6 @@ function checkPin(){
     document.getElementById('pinError').classList.add('show');
   }
 }
-
 function showCustomer(){
   document.getElementById('staffLogin').style.display = 'none';
   document.getElementById('staffView').style.display = 'none';
@@ -230,6 +266,7 @@ function showCustomer(){
   if(staffUnsub){ staffUnsub(); staffUnsub = null; }
 }
 
+// ---------- 顧客查詢 ----------
 async function queryOrder(){
   const num = document.getElementById('queryInput').value.trim();
   const phone3 = document.getElementById('queryPhone3').value.trim();
@@ -244,21 +281,20 @@ async function queryOrder(){
     const docRef = db.collection(COLLECTION).doc(num);
     const snap = await docRef.get();
     if(!snap.exists || snap.data().phone3 !== phone3){
+      notFoundBox.textContent = '查無資料,請確認單號與手機末三碼是否正確。';
       notFoundBox.classList.add('show');
       return;
     }
     renderCustomerResult(num, snap.data());
     resultBox.classList.add('show');
-    // 之後即時監聽,狀態一改就自動更新畫面,不用重新查詢
     customerUnsub = docRef.onSnapshot(s => {
       if(s.exists) renderCustomerResult(num, s.data());
     });
   }catch(e){
-    notFoundBox.textContent = '查詢時發生問題,請確認網路連線後再試一次。';
+    notFoundBox.textContent = explainError(e);
     notFoundBox.classList.add('show');
   }
 }
-
 function renderCustomerResult(num, data){
   document.getElementById('resultNum').textContent = '單號 ' + num;
   const dot = document.getElementById('resultDot');
@@ -267,30 +303,57 @@ function renderCustomerResult(num, data){
     dot.className = 'dot done';
     text.className = 'status-text done';
     text.textContent = '已完成,歡迎取件';
+    document.getElementById('resultMeta').textContent = '完成時間 ' + formatTime(data.updatedAt);
   } else {
     dot.className = 'dot wip';
     text.className = 'status-text wip';
     text.textContent = '施作中';
+    document.getElementById('resultMeta').textContent = data.eta ? '預計完成 ' + formatTime(data.eta) : '';
   }
-  document.getElementById('resultMeta').textContent = '更新時間 ' + formatTime(data.updatedAt);
 }
 
+// ---------- 錯誤訊息判斷 ----------
+function explainError(e){
+  console.error(e);
+  if(e && e.code === 'permission-denied'){
+    return '⚠ 沒有讀寫權限,請檢查 Firestore 安全性規則';
+  }
+  if(e && (e.code === 'unavailable' || e.message === 'Failed to fetch')){
+    return '⚠ 連線逾時,請確認網路後再試一次';
+  }
+  return '⚠ 發生錯誤(' + (e && e.code ? e.code : '未知') + '),請重新整理再試一次';
+}
+function showSyncError(e){
+  const hint = document.getElementById('syncHint');
+  hint.textContent = explainError(e);
+  hint.classList.add('err');
+  setTimeout(() => {
+    hint.textContent = '即時同步中';
+    hint.classList.remove('err');
+  }, 4000);
+}
+
+// ---------- 店家操作 ----------
 async function addOrder(){
   const input = document.getElementById('newOrderInput');
   const phoneInput = document.getElementById('newPhone3Input');
+  const etaInput = document.getElementById('newEta');
   const num = input.value.trim();
   const phone3 = phoneInput.value.trim();
+  const eta = etaInput.value ? new Date(etaInput.value).getTime() : null;
   if(!num || !phone3) return;
-  input.value = '';
-  phoneInput.value = '';
   try{
     await db.collection(COLLECTION).doc(num).set({
       status: 'wip',
       phone3: phone3,
+      eta: eta,
       updatedAt: firebase.firestore.FieldValue.serverTimestamp()
     });
+    input.value = '';
+    phoneInput.value = '';
+    etaInput.value = '';
   }catch(e){
-    showSyncError();
+    showSyncError(e);
   }
 }
 
@@ -303,7 +366,7 @@ async function toggleStatus(num){
       updatedAt: firebase.firestore.FieldValue.serverTimestamp()
     });
   }catch(e){
-    showSyncError();
+    showSyncError(e);
   }
 }
 
@@ -311,18 +374,32 @@ async function removeOrder(num){
   try{
     await db.collection(COLLECTION).doc(num).delete();
   }catch(e){
-    showSyncError();
+    showSyncError(e);
   }
 }
 
-function showSyncError(){
-  const hint = document.getElementById('syncHint');
-  hint.textContent = '⚠ 網路連線異常,請確認連線後再試一次';
-  hint.classList.add('err');
-  setTimeout(() => {
-    hint.textContent = '即時同步中';
-    hint.classList.remove('err');
-  }, 3500);
+function toggleEditPanel(num){
+  editingNum = (editingNum === num) ? null : num;
+  renderStaffList();
+  if(editingNum){
+    const o = ordersCache[num];
+    const etaInput = document.getElementById('editEta_' + num);
+    if(etaInput && o.eta) etaInput.value = toDatetimeLocalValue(new Date(o.eta));
+  }
+}
+
+async function saveEta(num){
+  const etaInput = document.getElementById('editEta_' + num);
+  const eta = etaInput.value ? new Date(etaInput.value).getTime() : null;
+  try{
+    await db.collection(COLLECTION).doc(num).update({
+      eta: eta,
+      updatedAt: firebase.firestore.FieldValue.serverTimestamp()
+    });
+    editingNum = null;
+  }catch(e){
+    showSyncError(e);
+  }
 }
 
 function startStaffListener(){
@@ -332,9 +409,7 @@ function startStaffListener(){
       ordersCache = {};
       snapshot.forEach(doc => { ordersCache[doc.id] = doc.data(); });
       renderStaffList();
-    }, err => {
-      showSyncError();
-    });
+    }, err => { showSyncError(err); });
 }
 
 function renderStaffList(){
@@ -347,15 +422,34 @@ function renderStaffList(){
   list.innerHTML = keys.map(num => {
     const o = ordersCache[num];
     const isDone = o.status === 'done';
+    const isEditing = editingNum === num;
     return `
       <div class="item">
-        <div class="item-left">
-          <span class="item-num">${num}</span>
-          <span class="pill ${isDone ? 'done' : 'wip'}">${isDone ? '已完成' : '施作中'}</span>
+        <div class="item-top">
+          <div class="item-left">
+            <span class="item-num">${num}</span>
+            <span class="pill ${isDone ? 'done' : 'wip'}">${isDone ? '已完成' : '施作中'}</span>
+          </div>
+          <div class="item-actions">
+            <button class="icon-btn" onclick="toggleStatus('${num}')">${isDone ? '恢復施作中' : '標記完成'}</button>
+            ${!isDone ? `<button class="icon-btn" onclick="toggleEditPanel('${num}')">改時間</button>` : ''}
+            <button class="icon-btn" onclick="removeOrder('${num}')">刪除</button>
+          </div>
         </div>
-        <div class="item-actions">
-          <button class="icon-btn" onclick="toggleStatus('${num}')">${isDone ? '恢復施作中' : '標記完成'}</button>
-          <button class="icon-btn" onclick="removeOrder('${num}')">刪除</button>
+        ${!isDone && o.eta ? `<div class="item-eta">預計完成 ${formatTime(o.eta)}</div>` : ''}
+        <div class="edit-panel ${isEditing ? 'show' : ''}">
+          <div class="chips">
+            <span class="chip" onclick="quickPick('editEta_${num}', 30)">30分鐘後</span>
+            <span class="chip" onclick="quickPick('editEta_${num}', 60)">1小時後</span>
+            <span class="chip" onclick="quickPick('editEta_${num}', 120)">2小時後</span>
+            <span class="chip" onclick="quickPickToday('editEta_${num}', 18, 0)">今天18:00</span>
+            <span class="chip" onclick="quickPickTomorrow('editEta_${num}', 10, 0)">明天10:00</span>
+          </div>
+          <input type="datetime-local" id="editEta_${num}">
+          <div class="edit-actions">
+            <button class="btn small" onclick="saveEta('${num}')">儲存</button>
+            <button class="btn small outline" onclick="toggleEditPanel('${num}')">取消</button>
+          </div>
         </div>
       </div>
     `;
