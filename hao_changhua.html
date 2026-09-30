@@ -188,8 +188,8 @@ ul.pts li small{display:block;color:var(--muted);font-size:13px}
 .work img,.work video{width:100%;height:100%;object-fit:cover;display:block}
 .work .vid{border-radius:12px;overflow:hidden;border:1px solid var(--line);aspect-ratio:3/4;background:var(--panel)}
 .work figcaption{display:grid;gap:2px}
-.work figcaption b{font-size:15px;font-weight:600}
-.work figcaption span{font-size:13px;color:var(--muted)}
+.work figcaption span{font-size:14px;line-height:1.6;color:var(--fg)}
+.work figcaption span+span{color:var(--muted)}
 @media (max-width:760px){
   .gallery{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin-inline:-20px;padding-inline:20px;padding-bottom:6px;scrollbar-width:none}
   .gallery::-webkit-scrollbar{display:none}
@@ -441,36 +441,32 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     </div>
     <div class="gallery">
       <figure class="work">
-        <button type="button" class="zoom" data-src="work-1.jpg" aria-label="放大查看：酒紅色・招財貓鐳射"><img src="work-1.jpg" alt="機身包膜成品：酒紅色・招財貓鐳射" loading="lazy" width="1000" height="1333"></button>
-        <figcaption><b>酒紅色・招財貓鐳射</b><span>機身包膜＋鏡頭貼／鏡頭底座</span></figcaption>
+        <button type="button" class="zoom" data-src="work-1.jpg" aria-label="放大查看：霧面包膜、酒紅鏡頭、晶雕雷射金虎爺鏡頭底座"><img src="work-1.jpg" alt="成品：霧面包膜、酒紅鏡頭、晶雕雷射金虎爺鏡頭底座" loading="lazy" width="1000" height="1333"></button>
+        <figcaption><span>霧面包膜</span><span>酒紅鏡頭</span><span>晶雕雷射金虎爺鏡頭底座</span></figcaption>
       </figure>
       <figure class="work">
-        <button type="button" class="zoom" data-src="work-2.jpg" aria-label="放大查看：黑色・蝴蝶結鐳射"><img src="work-2.jpg" alt="機身包膜成品：黑色・蝴蝶結鐳射" loading="lazy" width="1000" height="1333"></button>
-        <figcaption><b>黑色・蝴蝶結鐳射</b><span>機身包膜＋鏡頭貼／鏡頭底座</span></figcaption>
+        <button type="button" class="zoom" data-src="work-2.jpg" aria-label="放大查看：琉光晶雕蝴蝶結膜、黑色鏡頭、彩繪蝴蝶結底座"><img src="work-2.jpg" alt="成品：琉光晶雕蝴蝶結膜、黑色鏡頭、彩繪蝴蝶結底座" loading="lazy" width="1000" height="1333"></button>
+        <figcaption><span>琉光晶雕蝴蝶結膜</span><span>黑色鏡頭</span><span>彩繪蝴蝶結底座</span></figcaption>
       </figure>
       <figure class="work">
-        <button type="button" class="zoom" data-src="work-3.jpg" aria-label="放大查看：藍色・三麗鷗鐳射"><img src="work-3.jpg" alt="機身包膜成品：藍色・三麗鷗鐳射" loading="lazy" width="1000" height="1333"></button>
-        <figcaption><b>藍色・三麗鷗鐳射</b><span>機身包膜＋鏡頭貼／鏡頭底座</span></figcaption>
+        <button type="button" class="zoom" data-src="work-3.jpg" aria-label="放大查看：酷企鵝雷射包膜、泡泡底座刺蝟款"><img src="work-3.jpg" alt="成品：酷企鵝雷射包膜、泡泡底座刺蝟款" loading="lazy" width="1000" height="1333"></button>
+        <figcaption><span>酷企鵝雷射包膜</span><span>泡泡底座刺蝟款</span></figcaption>
       </figure>
       <figure class="work">
-        <button type="button" class="zoom" data-src="work-4.jpg" aria-label="放大查看：黑色・小花笑臉鐳射"><img src="work-4.jpg" alt="機身包膜成品：黑色・小花笑臉鐳射" loading="lazy" width="1000" height="1333"></button>
-        <figcaption><b>黑色・小花笑臉鐳射</b><span>機身包膜＋鏡頭貼／鏡頭底座</span></figcaption>
+        <button type="button" class="zoom" data-src="work-4.jpg" aria-label="放大查看：琉光晶雕 Peace 小雛菊、晶雕雷射小雛菊底座"><img src="work-4.jpg" alt="成品：琉光晶雕 Peace 小雛菊、晶雕雷射小雛菊底座" loading="lazy" width="1000" height="1333"></button>
+        <figcaption><span>琉光晶雕 Peace 小雛菊</span><span>晶雕雷射小雛菊底座</span></figcaption>
       </figure>
       <figure class="work" data-video hidden>
         <div class="vid"><video data-src="videos/copy_16D00E48-244B-4CD6-9CC8-ACB633913C79.mp4" muted loop playsinline preload="metadata"></video></div>
-        <figcaption><b>細節影片</b><span>機身包膜實拍</span></figcaption>
       </figure>
       <figure class="work" data-video hidden>
         <div class="vid"><video data-src="videos/copy_2F68A4DA-E685-4FDB-AD74-F5E005194E8A.mp4" muted loop playsinline preload="metadata"></video></div>
-        <figcaption><b>細節影片</b><span>機身包膜實拍</span></figcaption>
       </figure>
       <figure class="work" data-video hidden>
         <div class="vid"><video data-src="videos/copy_ACB77148-12DF-48AB-AA6B-D7CBF4C89516.mp4" muted loop playsinline preload="metadata"></video></div>
-        <figcaption><b>細節影片</b><span>機身包膜實拍</span></figcaption>
       </figure>
       <figure class="work" data-video hidden>
         <div class="vid"><video data-src="videos/copy_D3350D79-380F-4905-90D7-368570FA063E.mp4" muted loop playsinline preload="metadata"></video></div>
-        <figcaption><b>細節影片</b><span>機身包膜實拍</span></figcaption>
       </figure>
     </div>
     <p class="swipe">← 左右滑動看更多 →</p>
