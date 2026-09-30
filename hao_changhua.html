@@ -212,6 +212,17 @@ ul.pts li small{display:block;color:var(--muted);font-size:13px}
 footer{padding-block:28px 40px;color:var(--muted);font-size:12px;border-top:1px solid var(--line)}
 footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
+
+/* 施工時間 */
+.worktime{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+.wt{position:relative;display:grid;gap:2px;padding:16px 18px 16px 44px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+.wt::before{content:"";position:absolute;left:16px;top:20px;width:16px;height:16px;border:1.5px solid var(--ice);border-radius:50%;box-shadow:0 0 8px rgba(166,219,239,.35)}
+.wt::after{content:"";position:absolute;left:23px;top:24px;width:4px;height:5px;border-left:1.5px solid var(--ice);border-bottom:1.5px solid var(--ice)}
+.wt-k{font-size:13px;color:var(--muted);letter-spacing:.08em}
+.wt b{font-size:24px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--fg)}
+.wt b small{font-size:14px;font-weight:400;color:var(--muted);margin-left:4px}
+.wt-n{font-size:13px;color:var(--muted)}
+@media (max-width:560px){.worktime{grid-template-columns:1fr}}
 /* ===== 科技感強化 ===== */
 body{background:
   radial-gradient(1200px 520px at 80% -120px, rgba(166,219,239,.10), transparent 70%),
@@ -543,6 +554,19 @@ body{background:
     <div class="head">
       <p class="eyebrow">價目表</p>
       <h2>詳細價目表</h2>
+    </div>
+
+    <div class="worktime" aria-label="施工時間">
+      <div class="wt">
+        <span class="wt-k">保護貼施工時間</span>
+        <b>15–30<small>分鐘</small></b>
+        <span class="wt-n">依商品不同而不同</span>
+      </div>
+      <div class="wt">
+        <span class="wt-k">機身包膜基本工時</span>
+        <b>60–90<small>分鐘</small></b>
+        <span class="wt-n">手機、Apple Watch；其他產品另計</span>
+      </div>
     </div>
 
     <div class="tabs" role="tablist" aria-label="價目表分類">
