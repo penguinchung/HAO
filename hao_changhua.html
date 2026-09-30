@@ -441,31 +441,35 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     </div>
     <div class="gallery">
       <figure class="work">
-        <button type="button" class="zoom" data-src="images/work-1.jpg" aria-label="放大查看：酒紅色・招財貓鐳射"><img src="images/work-1.jpg" alt="機身包膜成品：酒紅色・招財貓鐳射" loading="lazy" width="1000" height="1333"></button>
+        <button type="button" class="zoom" data-src="work-1.jpg" aria-label="放大查看：酒紅色・招財貓鐳射"><img src="work-1.jpg" alt="機身包膜成品：酒紅色・招財貓鐳射" loading="lazy" width="1000" height="1333"></button>
         <figcaption><b>酒紅色・招財貓鐳射</b><span>機身包膜＋鏡頭貼／鏡頭底座</span></figcaption>
       </figure>
       <figure class="work">
-        <button type="button" class="zoom" data-src="images/work-2.jpg" aria-label="放大查看：黑色・蝴蝶結鐳射"><img src="images/work-2.jpg" alt="機身包膜成品：黑色・蝴蝶結鐳射" loading="lazy" width="1000" height="1333"></button>
+        <button type="button" class="zoom" data-src="work-2.jpg" aria-label="放大查看：黑色・蝴蝶結鐳射"><img src="work-2.jpg" alt="機身包膜成品：黑色・蝴蝶結鐳射" loading="lazy" width="1000" height="1333"></button>
         <figcaption><b>黑色・蝴蝶結鐳射</b><span>機身包膜＋鏡頭貼／鏡頭底座</span></figcaption>
       </figure>
       <figure class="work">
-        <button type="button" class="zoom" data-src="images/work-3.jpg" aria-label="放大查看：藍色・三麗鷗鐳射"><img src="images/work-3.jpg" alt="機身包膜成品：藍色・三麗鷗鐳射" loading="lazy" width="1000" height="1333"></button>
+        <button type="button" class="zoom" data-src="work-3.jpg" aria-label="放大查看：藍色・三麗鷗鐳射"><img src="work-3.jpg" alt="機身包膜成品：藍色・三麗鷗鐳射" loading="lazy" width="1000" height="1333"></button>
         <figcaption><b>藍色・三麗鷗鐳射</b><span>機身包膜＋鏡頭貼／鏡頭底座</span></figcaption>
       </figure>
       <figure class="work">
-        <button type="button" class="zoom" data-src="images/work-4.jpg" aria-label="放大查看：黑色・小花笑臉鐳射"><img src="images/work-4.jpg" alt="機身包膜成品：黑色・小花笑臉鐳射" loading="lazy" width="1000" height="1333"></button>
+        <button type="button" class="zoom" data-src="work-4.jpg" aria-label="放大查看：黑色・小花笑臉鐳射"><img src="work-4.jpg" alt="機身包膜成品：黑色・小花笑臉鐳射" loading="lazy" width="1000" height="1333"></button>
         <figcaption><b>黑色・小花笑臉鐳射</b><span>機身包膜＋鏡頭貼／鏡頭底座</span></figcaption>
       </figure>
       <figure class="work" data-video hidden>
-        <div class="vid"><video data-src="videos/video1.mp4" muted loop playsinline preload="metadata"></video></div>
+        <div class="vid"><video data-src="videos/copy_16D00E48-244B-4CD6-9CC8-ACB633913C79.mp4" muted loop playsinline preload="metadata"></video></div>
         <figcaption><b>細節影片</b><span>機身包膜實拍</span></figcaption>
       </figure>
       <figure class="work" data-video hidden>
-        <div class="vid"><video data-src="videos/video2.mp4" muted loop playsinline preload="metadata"></video></div>
+        <div class="vid"><video data-src="videos/copy_2F68A4DA-E685-4FDB-AD74-F5E005194E8A.mp4" muted loop playsinline preload="metadata"></video></div>
         <figcaption><b>細節影片</b><span>機身包膜實拍</span></figcaption>
       </figure>
       <figure class="work" data-video hidden>
-        <div class="vid"><video data-src="videos/video3.mp4" muted loop playsinline preload="metadata"></video></div>
+        <div class="vid"><video data-src="videos/copy_ACB77148-12DF-48AB-AA6B-D7CBF4C89516.mp4" muted loop playsinline preload="metadata"></video></div>
+        <figcaption><b>細節影片</b><span>機身包膜實拍</span></figcaption>
+      </figure>
+      <figure class="work" data-video hidden>
+        <div class="vid"><video data-src="videos/copy_D3350D79-380F-4905-90D7-368570FA063E.mp4" muted loop playsinline preload="metadata"></video></div>
         <figcaption><b>細節影片</b><span>機身包膜實拍</span></figcaption>
       </figure>
     </div>
@@ -581,7 +585,7 @@ const LINE_URL = "";
   }));
   function close(){ lb.hidden = true; document.body.style.overflow = ""; if (opener) opener.focus(); }
 
-  // 影片：把 video1.mp4～video3.mp4 放進 videos 資料夾就會自動出現
+  // 影片：videos 資料夾裡的檔案，找不到的會自動隱藏
   document.querySelectorAll("[data-video]").forEach(f => {
     const v = f.querySelector("video");
     v.addEventListener("loadeddata", () => { f.hidden = false; v.play().catch(()=>{}); });
