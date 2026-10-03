@@ -7,7 +7,7 @@
 <meta name="description" content="小豪包膜｜HAO 全透明玻璃貼・一體成形機身包膜・周邊配件，服務介紹、成品作品與價目表。">
 <meta property="og:title" content="小豪包膜 服務介紹">
 <meta property="og:description" content="HAO 全透明玻璃貼・一體成形機身包膜・周邊配件，服務介紹、成品作品與價目表。">
-<title>小豪包膜（中區）服務介紹</title>
+<title>小豪包膜（彰化）服務介紹</title>
 <style>html{-webkit-text-size-adjust:100%}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
 
 
@@ -65,6 +65,8 @@ p{margin:0}
 .nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0}
 .nav ul a{white-space:nowrap;display:block;padding:6px 10px;border-radius:999px;text-decoration:none;font-size:14px;color:var(--muted)}
 .nav ul a:hover{color:var(--fg);background:var(--panel-2)}
+.nav .sm{display:none}
+@media (max-width:520px){.nav .lg{display:none}.nav .sm{display:inline}}
 .nav ul a.cta{color:var(--ink);background:var(--ice);font-weight:700}
 .brand small.region{font-size:11px;font-weight:500;letter-spacing:.12em;color:var(--ice);margin-left:6px;padding:1px 6px;border:1px solid var(--line-strong);border-radius:4px;vertical-align:2px}
 @media (max-width:520px){.brand{gap:6px;font-size:14px}.brand img{height:28px}.nav ul{gap:0}.nav ul a{padding:5px 6px;font-size:13px;white-space:nowrap}.nav .wrap{padding-inline:14px;gap:8px}.brand small.region{margin-left:4px;padding:0 4px;font-size:10px}}
@@ -265,6 +267,147 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .real-hint{text-align:center;font-size:12px;color:var(--muted);margin-top:8px}
 .real-tag{white-space:nowrap;flex-shrink:0;font-size:11px;letter-spacing:.1em;padding:1px 7px;border-radius:4px;color:var(--ice);border:1px solid var(--line-strong)}
 .real{max-width:460px;margin-inline:auto}@media (max-width:640px){.real{gap:10px}.real-item figcaption{font-size:12px;align-items:flex-start}}
+
+/* 黑邊原理圖解 */
+.why{margin-top:28px;padding:24px;border:1px solid var(--line);border-radius:16px;background:var(--panel)}
+.why-head{display:grid;gap:8px;margin-bottom:20px}
+.why-head h3{font-size:20px}
+.why-head p{color:var(--muted);font-size:15px;max-width:44em}
+.why-head p b{color:var(--fg);font-weight:600}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.why-panel{margin:0;display:grid;gap:12px;align-content:start;min-width:0}
+.why-panel figcaption{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600}
+.why-panel svg{width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background-color:var(--ink);background-image:linear-gradient(rgba(168,210,232,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(168,210,232,.05) 1px,transparent 1px);background-size:16px 16px}
+.why-panel svg text{font-family:var(--f-body)}
+.why-list{list-style:none;margin:0;padding:0;display:grid;gap:10px;counter-reset:w}
+.why-list li{counter-increment:w;display:grid;grid-template-columns:24px 1fr;column-gap:10px;font-size:14px;line-height:1.65;color:var(--muted)}
+.why-list li::before{content:counter(w);grid-row:span 2;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700;border:1px solid currentColor}
+.why-list.bad li::before{color:var(--bad)}
+.why-list.good li::before{color:var(--ice)}
+.why-list li b{color:var(--fg);font-weight:600;font-size:15px}
+.why-note{margin:4px 0 0;padding:10px 12px;border-radius:8px;font-size:13px;line-height:1.7;color:var(--muted);background:rgba(166,219,239,.06);border:1px dashed var(--line-strong)}
+@media (max-width:760px){.why{padding:18px}.why-grid{grid-template-columns:1fr}}
+
+/* 抗藍光迷思 */
+.blue{margin-top:36px;padding:26px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,rgba(166,219,239,.05),transparent 40%),var(--panel)}
+.blue .eyebrow{margin-bottom:2px}
+.blue-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;margin-top:18px}
+.blue-card{border:1px solid var(--line);border-radius:12px;padding:18px;background:var(--ink);display:grid;gap:14px;align-content:start;min-width:0}
+.blue-card h4,.bright h4{margin:0;font-size:17px}
+.mini-pair{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.mini-pair figure{margin:0;display:grid;gap:8px;justify-items:center;text-align:center}
+.mini-pair figcaption{font-size:13px;font-weight:600;line-height:1.4}
+.mini-pair small{display:block;font-weight:400;font-size:12px;color:var(--muted);margin-top:2px}
+.mini-screen{position:relative;width:64px;aspect-ratio:9/18;border-radius:12px;border:3px solid #2b333c;overflow:hidden;background:linear-gradient(160deg,#5ab0ff 0%,#8f7bff 45%,#ff7eb3 100%);display:grid;align-content:center;gap:5px;padding:8px}
+.mini-screen i{height:8px;border-radius:3px;background:rgba(255,255,255,.85)}
+.mini-screen i:nth-child(2){width:70%}
+.mini-screen.tint-yellow::after{content:"";position:absolute;inset:0;background:rgba(255,190,40,.42);mix-blend-mode:multiply}
+.mini-screen.tint-sheen::after{content:"";position:absolute;inset:0;background:linear-gradient(130deg,rgba(120,90,255,.45),rgba(60,220,170,.25) 50%,rgba(255,200,60,.3));mix-blend-mode:screen;opacity:.8}
+.mini-screen.tint-sheen::before{content:"";position:absolute;inset:0;background:rgba(255,200,80,.18);mix-blend-mode:multiply}
+.blue-note{margin:0;font-size:13px;line-height:1.7;color:var(--muted)}
+.blue-note a{color:var(--ice)}
+.verdict{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.verdict li{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:10px 12px;border-radius:8px;background:var(--panel-2);font-size:14px}
+.v-x,.v-w{font-size:13px;font-weight:600;padding:2px 10px;border-radius:999px;white-space:nowrap}
+.v-x{color:var(--bad);border:1px solid rgba(224,137,111,.5)}
+.v-w{color:var(--amber);border:1px solid rgba(241,200,94,.45)}
+/* 亮度示範 */
+.bright{margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center;padding:20px;border:1px solid var(--line-strong);border-radius:14px;background:var(--ink)}
+.bright-text{display:grid;gap:12px;min-width:0}
+.bright h4 em{font-style:normal;color:var(--ice)}
+.bright p{margin:0;color:var(--muted);font-size:14px;line-height:1.75}
+.scene-btns{display:flex;flex-wrap:wrap;gap:6px}
+.scene-btns button{font:inherit;font-size:13px;padding:6px 14px;border-radius:999px;border:1px solid var(--line-strong);background:transparent;color:var(--muted);cursor:pointer}
+.scene-btns button[aria-pressed="true"]{background:var(--ice);color:var(--ink);border-color:var(--ice);font-weight:700}
+.scene-cap{color:var(--fg)!important;font-size:14px;min-height:1.8em}
+.tips{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:13px;color:var(--muted)}
+.tips b{color:var(--fg);font-weight:600;margin-right:8px}
+.stage{position:relative;height:320px;border-radius:12px;overflow:hidden;display:grid;place-items:center;padding:14px 0 58px}
+.amb{position:absolute;inset:0;transition:background 1.2s ease}
+.s0 .amb{background:radial-gradient(circle at 80% 15%,#fff6d8 0%,#ffe9a8 22%,#b9dcf2 60%,#8cc3e6 100%)}
+.s1 .amb{background:radial-gradient(circle at 25% 10%,#fff1d6 0%,#c9b79c 35%,#6f6658 100%)}
+.s2 .amb{background:radial-gradient(circle at 80% 18%,#2b3550 0%,#121726 45%,#05070c 100%)}
+.sun,.lamp,.moon{position:absolute;transition:opacity 1s ease,transform 1.2s ease;opacity:0}
+.sun{right:14%;top:9%;width:54px;height:54px;border-radius:50%;background:#fff6cf;box-shadow:0 0 30px 12px rgba(255,236,170,.95),0 0 90px 40px rgba(255,220,140,.55)}
+.lamp{left:16%;top:0;width:60px;height:34px;border-radius:0 0 40px 40px;background:#3a332a;box-shadow:0 30px 60px 10px rgba(255,228,180,.55)}
+.moon{right:16%;top:12%;width:34px;height:34px;border-radius:50%;box-shadow:-8px 4px 0 0 #e8ecf5}
+.s0 .sun,.s1 .lamp,.s2 .moon{opacity:1}
+.s0 .sun{animation:pulse 4s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.08)}}
+.phone{position:relative;width:112px;aspect-ratio:9/19;border-radius:22px;background:#15191f;padding:6px;box-shadow:0 20px 50px -10px rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.12)}
+.scr{position:relative;width:100%;height:100%;border-radius:17px;overflow:hidden;background:linear-gradient(160deg,#5ab0ff 0%,#8f7bff 45%,#ff7eb3 100%);display:grid;align-content:center}
+.ui{display:grid;gap:8px;padding:14px}
+.ui i{height:12px;border-radius:4px;background:rgba(255,255,255,.88)}
+.ui i:nth-child(2){width:70%}.ui i:nth-child(4){width:50%}
+.dim{position:absolute;inset:0;background:#000;transition:opacity 1.2s ease;opacity:.05}
+.night{position:absolute;inset:0;background:rgba(255,150,40,.35);mix-blend-mode:multiply;transition:opacity 1.2s ease;opacity:0}
+.s1 .dim{opacity:.32}
+.s2 .dim{opacity:.6}.s2 .night{opacity:1}
+.s0 .scr{box-shadow:0 0 0 0 transparent}
+.s2 .phone{box-shadow:0 0 40px 2px rgba(255,190,120,.18)}
+.meter{position:absolute;left:14px;right:14px;bottom:12px;display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:999px;background:rgba(10,12,15,.6);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);font-size:12px;color:#e9edf0}
+.meter .bar{flex:1;height:6px;border-radius:999px;background:rgba(255,255,255,.18);overflow:hidden}
+.meter .bar b{display:block;height:100%;width:90%;border-radius:inherit;background:var(--ice);box-shadow:0 0 10px var(--ice);transition:width 1.2s ease}
+.s1 .meter .bar b{width:55%}.s2 .meter .bar b{width:18%}
+.meter em{font-style:normal;font-variant-numeric:tabular-nums;width:3em;text-align:right}
+.blue-end{margin:18px 0 0;text-align:center;font-family:var(--f-display);font-size:clamp(17px,3.4vw,22px);font-weight:700;color:var(--fg)}
+@media (max-width:860px){.blue-grid,.bright{grid-template-columns:1fr}.stage{order:-1}}
+@media (max-width:560px){.blue{padding:18px}.mini-screen{width:54px}}
+@media (prefers-reduced-motion:reduce){.amb,.sun,.lamp,.moon,.dim,.night,.meter .bar b{transition:none}.s0 .sun{animation:none}}
+
+/* 眼科醫師說法 */
+.doc{margin-top:16px;display:grid;gap:12px}
+.doc h4{margin:0;font-size:17px}
+.doc-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.quote{margin:0;position:relative;padding:18px 18px 16px 22px;border-radius:12px;background:var(--ink);border:1px solid var(--line);border-left:3px solid var(--ice);display:grid;gap:8px;align-content:start}
+.quote p{margin:0;font-family:var(--f-display);font-size:16px;line-height:1.7;color:var(--fg)}
+.quote footer{display:block;padding:0;border:0;font-size:13px;line-height:1.7;color:var(--muted);margin-top:4px}
+.quote footer b{display:block;color:var(--ice);font-weight:600;font-size:13px;margin-bottom:2px}
+.quote footer a{color:var(--ice);margin-left:6px}
+@media (max-width:760px){.doc-grid{grid-template-columns:1fr}}
+
+/* 抗藍光示意加強 */
+.mini-pair{gap:14px}
+.mini-screen{width:84px;background:#f4f6f9;border-color:#2b333c;padding:10px 9px;gap:7px;align-content:start}
+.mini-screen i{background:#d7dde5;height:7px}
+.mini-screen i:first-child{height:34px;border-radius:6px;background:linear-gradient(135deg,#3d8bff,#9b6bff 55%,#ff6fa5)}
+.mini-screen::before{content:"";position:absolute;left:9px;right:9px;bottom:12px;height:22px;border-radius:6px;background:linear-gradient(90deg,#34c759 0 33%,#0a84ff 33% 66%,#ff3b30 66%)}
+.mini-screen.tint-yellow::after{background:rgba(255,176,0,.55);mix-blend-mode:multiply}
+.mini-screen.tint-sheen::after{content:"";position:absolute;inset:0;mix-blend-mode:normal;opacity:1;background:linear-gradient(125deg,rgba(150,110,255,.0) 10%,rgba(150,110,255,.55) 32%,rgba(70,230,190,.45) 48%,rgba(150,110,255,.0) 66%),rgba(255,196,60,.28)}
+.mini-screen.tint-sheen::before{background:linear-gradient(90deg,#34c759 0 33%,#0a84ff 33% 66%,#ff3b30 66%)}
+.mini-pair figure:last-child .mini-screen{box-shadow:0 0 0 2px var(--ice),0 0 18px -2px rgba(166,219,239,.6)}
+.mini-legend{margin:0;font-size:12px;color:var(--muted);text-align:center}
+@media (max-width:560px){.mini-screen{width:70px}}
+.mini-screen.tint-sheen::before{inset:auto;left:9px;right:9px;bottom:12px;height:22px;mix-blend-mode:normal}
+@media (max-width:420px){.brand .bname{display:none}.brand small.region{margin-left:0}.nav ul a{padding:5px 5px;font-size:12.5px}}
+
+/* 三種抗藍光貼說明（可展開） */
+.more-info{border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+.more-info summary{cursor:pointer;list-style:none;padding:12px 14px;font-size:14px;font-weight:600;color:var(--ice);display:flex;align-items:center;gap:8px}
+.more-info summary::-webkit-details-marker{display:none}
+.more-info summary::before{content:"+";display:grid;place-items:center;width:20px;height:20px;border-radius:50%;border:1px solid var(--line-strong);font-size:14px;line-height:1;transition:transform .3s}
+.more-info[open] summary::before{content:"−"}
+.more-info summary:focus-visible{outline:2px solid var(--ice);outline-offset:2px;border-radius:10px}
+.types{display:grid;gap:10px;padding:0 14px 4px}
+.type{padding:12px 14px;border-radius:8px;background:var(--ink);border-left:3px solid var(--line-strong)}
+.t-yellow{border-left-color:#f0b429}.t-sheen{border-left-color:#9b7bff}.t-clear{border-left-color:#c9d3db}
+.type h5{margin:0 0 8px;font-size:15px;display:flex;flex-wrap:wrap;align-items:baseline;gap:8px}
+.type h5 span{font-size:12px;font-weight:400;color:var(--muted)}
+.type dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:13px;line-height:1.65}
+.type dt{color:var(--fg);font-weight:600}
+.type dd{margin:0;color:var(--muted)}
+.types-sum{margin:10px 14px 14px;font-size:13px;line-height:1.7;color:var(--muted)}
+.types-sum b{color:var(--fg)}
+.real-title{margin:28px 0 0;font-size:17px;text-align:center}
+.real-compare{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:28px}
+.real-group{min-width:0;padding:16px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}
+.real-compare .real-title{margin:0 0 12px;text-align:left;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.real-compare .real{max-width:none;margin:0;gap:12px}
+@media (max-width:760px){.real-compare{grid-template-columns:1fr;gap:16px}.real-group{padding:12px}}
+.faceid{margin:0 0 12px;display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:8px;font-size:13px;font-weight:600;color:var(--ice);background:rgba(166,219,239,.08);border:1px solid var(--line-strong)}
+.faceid span{display:grid;place-items:center;width:18px;height:18px;border-radius:50%;background:var(--ice);color:var(--ink);font-size:11px}
+.fin .faceid{margin:0}
+.faceid-below{margin:12px 0 0}
 /* ===== 科技感強化 ===== */
 body{background:
   radial-gradient(1200px 520px at 80% -120px, rgba(166,219,239,.10), transparent 70%),
@@ -319,11 +462,12 @@ body{background:
 
 <nav class="nav" aria-label="頁面導覽">
   <div class="wrap">
-    <a class="brand" href="#top"><img src="logo.png" alt="小豪包膜"><span>小豪包膜<small class="region">中區</small></span></a>
+    <a class="brand" href="#top"><img src="logo.png" alt="小豪包膜"><span><span class="bname">小豪包膜</span><small class="region">彰化</small></span></a>
     <ul>
       <li><a href="#glass">玻璃貼</a></li>
       <li><a href="#wrap">包膜</a></li>
       <li><a href="#works">作品</a></li>
+      <li><a href="#aftercare"><span class="lg">售後服務</span><span class="sm">售後</span></a></li>
       <li><a class="cta" href="#price">價目表</a></li>
     </ul>
   </div>
@@ -470,17 +614,74 @@ body{background:
       </article>
     </div>
 
-    <div class="real" aria-label="HAO 全透明玻璃貼實拍">
-      <figure class="real-item">
-        <button type="button" class="zoom" aria-label="放大查看：邊緣特寫"><img src="glass-real-1.jpg" alt="HAO 全透明亮面玻璃貼實拍，邊緣特寫" loading="lazy" width="900" height="1200"></button>
-        <figcaption><span class="real-tag">實拍</span>邊緣貼合到圓角，沒有黑框</figcaption>
-      </figure>
-      <figure class="real-item">
-        <button type="button" class="zoom" aria-label="放大查看：亮屏畫面"><img src="glass-real-2.jpg" alt="HAO 全透明亮面玻璃貼實拍，亮屏畫面" loading="lazy" width="900" height="1200"></button>
-        <figcaption><span class="real-tag">實拍</span>亮屏時邊到角完整顯示，色彩不偏</figcaption>
-      </figure>
+    <div class="why bracket" id="why-black">
+      <div class="why-head">
+        <h3>為什麼黑邊容易卡灰塵、破邊？</h3>
+        <p>以 iPhone 來舉例（16～18），<b>螢幕不是全平面，周圍是有點弧度的</b>。黑邊滿版玻璃是平的，邊緣那一圈貼不下去，只好用黑框把浮起來的地方遮住。</p>
+      </div>
+      <div class="why-grid">
+        <figure class="why-panel">
+          <figcaption><span class="pill bad">它牌</span>黑邊滿版玻璃・邊緣剖面</figcaption>
+          <svg viewBox="0 0 340 220" role="img" aria-label="剖面圖：平的黑邊玻璃在螢幕周圍弧度處懸空，形成空隙，灰塵跑進去，邊緣受撞擊易破">
+            <defs>
+              <pattern id="gapHatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#e0896f" stroke-opacity=".45" stroke-width="2"/></pattern>
+            </defs>
+            <path d="M10 140 H200 Q245 140 262 168 L262 212 H10 Z" fill="#232a32"/>
+            <path d="M10 140 H200 Q245 140 262 168" fill="none" stroke="#6b7682" stroke-width="1.5"/>
+            <text x="20" y="190" fill="#8f99a3" font-size="12">螢幕（周圍有弧度）</text>
+            <path d="M205 136 H272 V168 H262 Q245 140 205 140 Z" fill="url(#gapHatch)"/>
+            <rect x="10" y="136" width="196" height="4" fill="#a6dbef" fill-opacity=".35"/>
+            <rect x="10" y="124" width="262" height="12" rx="1.5" fill="#a6dbef" fill-opacity=".14" stroke="#c9d3db" stroke-width="1"/>
+            <rect x="208" y="130" width="64" height="6" fill="#000"/>
+            <g fill="#d9c7b3"><circle cx="232" cy="143" r="2"/><circle cx="246" cy="150" r="2.4"/><circle cx="256" cy="158" r="1.8"/><circle cx="222" cy="140" r="1.4"/></g>
+            <path d="M326 86 L280 118" stroke="#e0896f" stroke-width="2" fill="none"/>
+            <path d="M280 118 l3 -10 M280 118 l10 -3" stroke="#e0896f" stroke-width="2" fill="none"/>
+            <polyline points="272,124 265,129 270,132 266,136" fill="none" stroke="#e0896f" stroke-width="1.6"/>
+            <g font-size="12" font-weight="700" text-anchor="middle">
+              <line x1="236" y1="96" x2="236" y2="131" stroke="#e0896f" stroke-width="1" stroke-dasharray="3 3"/>
+              <circle cx="236" cy="88" r="11" fill="#0a0c0f" stroke="#e0896f"/><text x="236" y="92" fill="#e0896f">1</text>
+              <line x1="252" y1="152" x2="300" y2="182" stroke="#e0896f" stroke-width="1" stroke-dasharray="3 3"/>
+              <circle cx="308" cy="188" r="11" fill="#0a0c0f" stroke="#e0896f"/><text x="308" y="192" fill="#e0896f">2</text>
+              <circle cx="326" cy="70" r="11" fill="#0a0c0f" stroke="#e0896f"/><text x="326" y="74" fill="#e0896f">3</text>
+            </g>
+            <text x="20" y="114" fill="#c9d3db" font-size="12">平面玻璃</text>
+          </svg>
+          <ol class="why-list bad">
+            <li><b>黑框遮住浮邊</b>邊緣沒有服貼，那一圈浮起來，只能用黑框遮住，也因此擋到畫面。</li>
+            <li><b>空隙卡灰塵</b>沒貼合就有空隙，灰塵從邊緣跑進去，清不掉。</li>
+            <li><b>懸空易破邊</b>邊緣底下是空的、沒有支撐，一碰撞就容易破邊。</li>
+          </ol>
+        </figure>
+        <figure class="why-panel ours">
+          <figcaption><span class="pill good">HAO</span>全透明玻璃貼・邊緣剖面</figcaption>
+          <svg viewBox="0 0 340 220" role="img" aria-label="剖面圖：HAO 全透明玻璃貼只貼在螢幕平面區，完整服貼沒有空隙，邊緣下方有支撐">
+            <path d="M10 140 H200 Q245 140 262 168 L262 212 H10 Z" fill="#232a32"/>
+            <path d="M10 140 H200 Q245 140 262 168" fill="none" stroke="#6b7682" stroke-width="1.5"/>
+            <text x="20" y="196" fill="#8f99a3" font-size="12">螢幕（周圍有弧度）</text>
+            <rect x="10" y="136" width="184" height="4" fill="#a6dbef" fill-opacity=".45"/>
+            <path d="M10 124 H190 Q195 124 195 129 V136 H10 Z" fill="#a6dbef" fill-opacity=".16" stroke="#a6dbef" stroke-width="1"/>
+            <path d="M200 140 Q245 140 262 168" fill="none" stroke="#8f99a3" stroke-width="1" stroke-dasharray="2 4" transform="translate(0 -6)"/>
+            <text x="236" y="128" fill="#8f99a3" font-size="11" text-anchor="middle">弧度區不貼</text>
+            <g font-size="12" font-weight="700" text-anchor="middle">
+              <line x1="170" y1="98" x2="170" y2="123" stroke="#a6dbef" stroke-width="1" stroke-dasharray="3 3"/>
+              <circle cx="170" cy="90" r="11" fill="#0a0c0f" stroke="#a6dbef"/><text x="170" y="94" fill="#a6dbef">1</text>
+              <line x1="170" y1="141" x2="170" y2="154" stroke="#a6dbef" stroke-width="1" stroke-dasharray="3 3"/>
+              <circle cx="170" cy="164" r="11" fill="#0a0c0f" stroke="#a6dbef"/><text x="170" y="168" fill="#a6dbef">2</text>
+              <line x1="196" y1="130" x2="214" y2="98" stroke="#a6dbef" stroke-width="1" stroke-dasharray="3 3"/>
+              <circle cx="218" cy="90" r="11" fill="#0a0c0f" stroke="#a6dbef"/><text x="218" y="94" fill="#a6dbef">3</text>
+            </g>
+            <text x="20" y="114" fill="#a6dbef" font-size="12">全透明玻璃</text>
+          </svg>
+          <ol class="why-list good">
+            <li><b>沒有黑框</b>只貼在螢幕平面區，不會有浮邊，也就不需要黑框去遮，畫面不被擋住。</li>
+            <li><b>完整服貼</b>整片貼實在平面上，沒有空隙讓灰塵跑進去。</li>
+            <li><b>邊緣有支撐</b>玻璃邊緣底下就是螢幕，不是懸空，受力時較不易破邊。</li>
+          </ol>
+          <p class="why-note">所以 HAO 全透明玻璃貼看起來會比黑邊滿版小一點，這是刻意只貼在能完整服貼的平面區。</p>
+        </figure>
+      </div>
     </div>
-    <p class="real-hint">點照片可放大查看細節</p>
+
 
     <div class="material bracket">
       <div class="mono">高鋁<br>玻璃</div>
@@ -502,9 +703,148 @@ body{background:
       </div>
       <div class="fin">
         <h4>電競霧面<span class="only">僅 iPhone 機型</span></h4>
+        <p class="faceid"><span aria-hidden="true">✓</span>iPhone 18 系列貼上後，Face ID 可正常使用</p>
         <p>顆粒比一般霧面細緻許多，不會把畫面霧掉；表面滑順度同步升級，玩遊戲不輸人。</p>
         <div class="chips"><span>細緻霧面</span><span>抗指紋</span><span>滑順手感</span></div>
       </div>
+    </div>
+    <div class="real-compare">
+      <div class="real-group">
+      <h4 class="real-title">全透明亮面實拍</h4>
+      <div class="real" aria-label="HAO 全透明玻璃貼實拍">
+        <figure class="real-item">
+          <button type="button" class="zoom" aria-label="放大查看：邊緣特寫"><img src="glass-real-1.jpg" alt="HAO 全透明亮面玻璃貼實拍，邊緣特寫" loading="lazy" width="900" height="1200"></button>
+        </figure>
+        <figure class="real-item">
+          <button type="button" class="zoom" aria-label="放大查看：亮屏畫面"><img src="glass-real-2.jpg" alt="HAO 全透明亮面玻璃貼實拍，亮屏畫面" loading="lazy" width="900" height="1200"></button>
+        </figure>
+      </div>
+      </div>
+      <div class="real-group">
+      <h4 class="real-title">電競霧面實拍<span class="only">僅 iPhone 機型</span></h4>
+      <div class="real" aria-label="HAO 電競霧面玻璃貼實拍">
+        <figure class="real-item">
+          <button type="button" class="zoom" aria-label="放大查看：電競霧面熄屏"><img src="matte-real-1.jpg" alt="HAO 電競霧面玻璃貼實拍，熄屏狀態" loading="lazy" width="900" height="1200"></button>
+        </figure>
+        <figure class="real-item">
+          <button type="button" class="zoom" aria-label="放大查看：電競霧面亮屏"><img src="matte-real-2.jpg" alt="HAO 電競霧面玻璃貼實拍，亮屏畫面" loading="lazy" width="900" height="1200"></button>
+        </figure>
+      </div>
+      </div>
+    </div>
+    <p class="real-hint">點照片可放大查看細節</p>
+
+
+    <div class="blue" id="bluelight">
+      <div class="why-head">
+        <p class="eyebrow">護眼小知識</p>
+      </div>
+      <template id="bluelight-myth">
+      <div class="why-head">
+        <p class="eyebrow">護眼迷思</p>
+        <h3>抗藍光貼，真的有在護眼嗎？</h3>
+        <p>常有客人問要不要貼抗藍光。我們整理了它的原理和目前的研究，給你做參考。</p>
+      </div>
+
+      <div class="blue-grid">
+        <div class="blue-card">
+          <h4>它的原理</h4>
+          <p class="mini-legend">同一個畫面，貼上不同保護貼的樣子</p>
+          <div class="mini-pair">
+            <figure><div class="mini-screen tint-yellow"><i></i><i></i><i></i></div><figcaption>偏黃的貼<small>吸收一部分藍光</small></figcaption></figure>
+            <figure><div class="mini-screen tint-sheen"><i></i><i></i><i></i></div><figcaption>藍紫光澤的貼<small>表面鍍膜反射藍光</small></figcaption></figure>
+            <figure><div class="mini-screen"><i></i><i></i><i></i></div><figcaption>HAO 全透明<small>保持螢幕原本顏色</small></figcaption></figure>
+          </div>
+          <p class="blue-note">包裝上的「阻隔率 90%」，常常是在螢幕幾乎不會發出的光段量的，實際濾掉的螢幕藍光通常少很多。</p>
+          <details class="more-info">
+            <summary>看三種抗藍光貼的原理與差別</summary>
+            <div class="types">
+              <div class="type t-yellow">
+                <h5>吸收型<span>偏黃、偏琥珀色</span></h5>
+                <dl>
+                  <dt>原理</dt><dd>玻璃或膠層裡加入會吸收藍光的色料，大約吸收 400～480nm 的藍紫光。</dd>
+                  <dt>效果</dt><dd>三種裡實際濾掉最多的，但濾得越多就越黃，兩者綁在一起。</dd>
+                  <dt>貼完</dt><dd>白底變米黃，藍色變暗偏綠，整體亮度變低，常會不自覺把亮度調高。</dd>
+                </dl>
+              </div>
+              <div class="type t-sheen">
+                <h5>反射型<span>表面泛藍紫、綠色光澤</span></h5>
+                <dl>
+                  <dt>原理</dt><dd>表面有一層很薄的鍍膜，利用光的干涉把一部分藍光反射回去。</dd>
+                  <dt>效果</dt><dd>濾掉的量通常比吸收型少。</dd>
+                  <dt>貼完</dt><dd>正面看微微偏黃；燈光下或斜看會有一層藍紫、綠色反光，暗色畫面特別明顯。</dd>
+                </dl>
+              </div>
+              <div class="type t-clear">
+                <h5>「無色」抗藍光<span>幾乎看不出顏色</span></h5>
+                <dl>
+                  <dt>原理</dt><dd>只擋很窄的一段，大約 400～420nm，接近紫光。</dd>
+                  <dt>效果</dt><dd>「阻隔率 90%」多半在這段量的；但手機藍光最強在 450nm 左右，這段幾乎沒擋到。</dd>
+                  <dt>貼完</dt><dd>最接近原本螢幕，偶爾有很淡的黃或反光。</dd>
+                </dl>
+              </div>
+            </div>
+            <p class="types-sum"><b>一句話整理：</b>濾得越多越黃；看起來越不黃的，通常濾得也越少。不管哪一種，目前都沒有研究證實能減輕眼睛疲勞或保護眼睛。</p>
+          </details>
+        </div>
+
+        <div class="blue-card">
+          <h4>研究怎麼說</h4>
+          <ul class="verdict">
+            <li><span class="v-k">減輕眼睛疲勞</span><span class="v-x">幾乎沒差別</span></li>
+            <li><span class="v-k">保護視網膜</span><span class="v-x">沒有證據</span></li>
+            <li><span class="v-k">畫面顏色、亮度</span><span class="v-w">會偏色、變暗</span></li>
+          </ul>
+          <p class="blue-note">Cochrane 於 2023 年整理 17 篇隨機對照研究：抗藍光鏡片對短期眼睛疲勞「可能幾乎沒有差別」。<a href="https://www.cochrane.org/evidence/CD013244_blue-light-filtering-spectacle-lenses-visual-performance-macular-back-part-eye-protection-and" target="_blank" rel="noopener">看研究摘要</a></p>
+        </div>
+      </div>
+
+      <div class="doc">
+        <h4>眼科與衛生單位怎麼說</h4>
+        <div class="doc-grid">
+          <blockquote class="quote">
+            <p>「沒有科學證據顯示，電腦螢幕發出的光會傷害眼睛。」</p>
+            <p>「美國眼科醫學會不建議使用抗藍光眼鏡。」</p>
+            <footer><b>美國眼科醫學會（AAO）</b>眼睛疲勞來自使用習慣，例如盯太久、眨眼變少，而不是螢幕的光。<a href="https://www.aao.org/eye-health/tips-prevention/are-computer-glasses-worth-it" target="_blank" rel="noopener">原文</a></footer>
+          </blockquote>
+          <blockquote class="quote">
+            <p>「3C 螢幕發出的光線並不會直接損害眼睛，但不良的用眼習慣將導致眼睛疲勞。」</p>
+            <p>「調降到舒適且不困難觀看的亮度，更能保護眼睛。」</p>
+            <footer><b>衛福部食品藥物管理署（2023）</b>建議減少使用 3C 的時間、適當調降螢幕亮度，並保持充足的環境光線。<a href="https://www.ettoday.net/news/20230415/2479868.htm" target="_blank" rel="noopener">報導</a></footer>
+          </blockquote>
+        </div>
+      </div>
+
+      </template>
+      <div class="bright">
+        <div class="bright-text">
+          <h4>我們建議的護眼方式：<em>跟著環境調整亮度</em></h4>
+          <p>螢幕比周圍亮太多或暗太多，眼睛都要一直調適，比較容易累。打開手機的「自動亮度」，就能讓螢幕跟著環境自己調。</p>
+          <div class="scene-btns" role="group" aria-label="切換環境">
+            <button type="button" data-s="0" aria-pressed="true">戶外白天</button>
+            <button type="button" data-s="1" aria-pressed="false">室內</button>
+            <button type="button" data-s="2" aria-pressed="false">夜晚關燈</button>
+          </div>
+          <p class="scene-cap" id="sceneCap" aria-live="polite">戶外陽光下：螢幕調亮，看得清楚不用瞇眼</p>
+          <ul class="tips">
+            <li><b>晚上</b>開「夜覽／護眼模式」，想關隨時能關</li>
+            <li><b>20-20-20</b>每 20 分鐘，看 6 公尺外 20 秒</li>
+            <li><b>距離</b>手機離眼睛至少一個手臂遠</li>
+          </ul>
+        </div>
+        <div class="stage s0" id="stage" aria-hidden="true">
+          <div class="amb"></div>
+          <div class="sun"></div>
+          <div class="lamp"></div>
+          <div class="moon"></div>
+          <div class="phone">
+            <div class="scr"><div class="ui"><i></i><i></i><i></i><i></i></div><div class="night"></div><div class="dim"></div></div>
+          </div>
+          <div class="meter"><span>螢幕亮度</span><div class="bar"><b></b></div><em id="meterVal">90%</em></div>
+        </div>
+      </div>
+
+      <p class="blue-end">保持螢幕原本的顏色，亮度交給環境決定。</p>
     </div>
   </div>
 </section>
@@ -629,7 +969,7 @@ body{background:
 </section>
 
 <!-- PROMISES -->
-<section class="block">
+<section class="block" id="aftercare">
   <div class="wrap">
     <div class="head">
       <p class="eyebrow">售後服務</p>
@@ -761,6 +1101,31 @@ const LINE_URL = "https://lin.ee/P3PiSPZ";
     t.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
     t.classList.remove("flash"); void t.offsetWidth; t.classList.add("flash");
   }));
+
+  // 亮度示範：自動輪播三種環境，點按鈕可手動切換
+  (function(){
+    const stage = document.getElementById("stage"); if (!stage) return;
+    const btns = [...document.querySelectorAll(".scene-btns button")];
+    const cap = document.getElementById("sceneCap"), val = document.getElementById("meterVal");
+    const data = [
+      ["戶外陽光下：螢幕調亮，看得清楚不用瞇眼","90%"],
+      ["室內：調到中等亮度，跟周圍差不多亮","55%"],
+      ["夜晚關燈：調暗，再開夜覽模式讓畫面偏暖","18%"]
+    ];
+    let cur = 0, timer = null;
+    function show(i){
+      cur = i; stage.className = "stage s" + i;
+      btns.forEach((b,k) => b.setAttribute("aria-pressed", String(k === i)));
+      cap.textContent = data[i][0]; val.textContent = data[i][1];
+    }
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    function start(){ if (!reduce && !timer) timer = setInterval(() => show((cur + 1) % 3), 3200); }
+    function stop(){ clearInterval(timer); timer = null; }
+    btns.forEach((b,i) => b.addEventListener("click", () => { stop(); show(i); }));
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(es => es.forEach(e => e.isIntersecting ? start() : stop()), { threshold: .3 }).observe(stage);
+    } else start();
+  })();
   let opener = null;
   function openLb(src, alt, from){
     opener = from; lbImg.src = src; lbImg.alt = alt; lb.hidden = false; lb.scrollTop = 0;
