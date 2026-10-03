@@ -408,6 +408,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .faceid span{display:grid;place-items:center;width:18px;height:18px;border-radius:50%;background:var(--ice);color:var(--ink);font-size:11px}
 .fin .faceid{margin:0}
 .faceid-below{margin:12px 0 0}
+@media (min-width:901px){.needs{display:flex;flex-wrap:wrap;justify-content:center}.needs .need{flex:0 0 calc((100% - 28px)/3)}}
+.reel{color:var(--ice);text-decoration:none;border-bottom:1px solid rgba(166,219,239,.4)}
+.reel:hover{border-bottom-color:var(--ice)}
 /* ===== 科技感強化 ===== */
 body{background:
   radial-gradient(1200px 520px at 80% -120px, rgba(166,219,239,.10), transparent 70%),
@@ -478,7 +481,7 @@ body{background:
   <div class="wrap">
     <div>
       <p class="eyebrow">細心・高要求</p>
-      <h1>貼到<em>看不出來</em>，<br>才算貼好。</h1>
+      <h1>就像手機<em>原本</em><br>就長這個樣子。</h1>
       <p class="lead">小豪包膜專注兩件事：HAO 全透明玻璃貼，和一體成形的包膜工法。材料挑過、工法講究，每一支手機都當成自己的在貼。</p>
       <div class="actions">
         <a class="btn primary" href="#price">直接看價目表</a>
@@ -522,27 +525,47 @@ body{background:
   <div class="wrap">
     <div class="head">
       <p class="eyebrow">從需求開始</p>
-      <h2>你在意的是？</h2>
+      <h2>這些，是你遇過的嗎？</h2>
     </div>
     <div class="needs">
       <button type="button" class="need" data-target="glass" data-tab="tab-glass">
-        <span class="need-q">不想要跟灰塵共處清不掉，又怕遮擋畫面</span>
+        <span class="need-q">用一段時間，看到一堆灰塵卻清不掉</span>
+        <span class="need-a"><span>推薦</span>HAO 全透明玻璃貼<i aria-hidden="true">→</i></span>
+      </button>
+      <button type="button" class="need" data-target="why-black" data-tab="tab-glass">
+        <span class="need-q">螢幕看起來像小了一圈，按鍵側邊的動畫都不完整</span>
         <span class="need-a"><span>推薦</span>HAO 全透明玻璃貼<i aria-hidden="true">→</i></span>
       </button>
       <button type="button" class="need" data-target="coating" data-tab="tab-glass">
-        <span class="need-q">用一個禮拜就開始沾指紋，注重清潔還不能用酒精擦</span>
+        <span class="need-q">用沒多久就開始沾指紋，注重清潔還不能用酒精擦</span>
         <span class="need-a"><span>推薦</span>真空電鍍塗層玻璃貼<i aria-hidden="true">→</i></span>
       </button>
       <button type="button" class="need" data-target="finish-glass" data-tab="tab-glass">
         <span class="need-q">打遊戲都輸人，滑順度不夠</span>
         <span class="need-a"><span>推薦</span>電競霧面玻璃貼<em class="only">iPhone 限定</em><i aria-hidden="true">→</i></span>
       </button>
+      <button type="button" class="need" data-target="finish-glass" data-tab="tab-glass">
+        <span class="need-q">換了 18 想貼霧面，卻影響 Face ID 感應</span>
+        <span class="need-a"><span>推薦</span>電競霧面玻璃貼<em class="only">18 可用</em><i aria-hidden="true">→</i></span>
+      </button>
+      <button type="button" class="need" data-target="aftercare" data-tab="tab-glass">
+        <span class="need-q">貼完遇到問題，總是只能認虧</span>
+        <span class="need-a"><span>推薦</span>小豪售後服務<i aria-hidden="true">→</i></span>
+      </button>
+      <button type="button" class="need" data-target="aftercare" data-tab="tab-glass">
+        <span class="need-q">想貼好一點，手滑破掉換一次好心痛</span>
+        <span class="need-a"><span>推薦</span>玻璃貼同隻更換半價<i aria-hidden="true">→</i></span>
+      </button>
       <button type="button" class="need" data-target="wrap" data-tab="tab-wrap">
-        <span class="need-q">手機換下都會轉賣，想讓價格更高</span>
+        <span class="need-q">回收手機，每次都因為外觀被扣價格</span>
         <span class="need-a"><span>推薦</span>一體成形機身包膜<i aria-hidden="true">→</i></span>
       </button>
       <button type="button" class="need" data-target="wrap" data-tab="tab-wrap">
         <span class="need-q">留給家人也想讓它保持外觀，不是充滿使用痕跡</span>
+        <span class="need-a"><span>推薦</span>一體成形機身包膜<i aria-hidden="true">→</i></span>
+      </button>
+      <button type="button" class="need" data-target="wrap" data-tab="tab-wrap">
+        <span class="need-q">以前包膜過，撕下來滿滿殘膠</span>
         <span class="need-a"><span>推薦</span>一體成形機身包膜<i aria-hidden="true">→</i></span>
       </button>
       <button type="button" class="need" data-target="works" data-tab="tab-wrap">
@@ -566,24 +589,24 @@ body{background:
       <article class="cmp">
         <header><h3>一般黑邊玻璃貼</h3><span class="pill bad">它牌</span></header>
         <div class="fig">
-          <svg viewBox="0 0 200 300" role="img" aria-label="黑邊玻璃貼示意：邊框遮住螢幕邊緣，邊緣卡灰塵，角落容易破">
+          <svg viewBox="0 0 236 300" role="img" aria-label="黑邊玻璃貼示意：邊框遮住螢幕邊緣，邊緣卡灰塵，角落容易破">
             <rect x="30" y="10" width="140" height="280" rx="26" fill="#11151a" stroke="#5b6570" stroke-width="2"/>
             <rect x="38" y="18" width="124" height="264" rx="19" fill="#1c2a36"/>
             <path fill-rule="evenodd" fill="#020304" d="M57 18 H143 A19 19 0 0 1 162 37 V263 A19 19 0 0 1 143 282 H57 A19 19 0 0 1 38 263 V37 A19 19 0 0 1 57 18 Z M60 29 H140 A11 11 0 0 1 151 40 V260 A11 11 0 0 1 140 271 H60 A11 11 0 0 1 49 260 V40 A11 11 0 0 1 60 29 Z"/>
-            <g fill="#c9b8a6">
-              <circle cx="52" cy="80" r="1.8"/><circle cx="50" cy="118" r="1.3"/><circle cx="51" cy="170" r="2"/><circle cx="148" cy="96" r="1.5"/><circle cx="149" cy="150" r="1.9"/><circle cx="150" cy="214" r="1.4"/><circle cx="96" cy="31" r="1.4"/><circle cx="120" cy="269" r="1.8"/><circle cx="78" cy="270" r="1.3"/><circle cx="51" cy="232" r="1.6"/>
+            <g fill="#e8d6c0">
+              <circle cx="43.5" cy="80" r="2"/><circle cx="44" cy="96" r="1.4"/><circle cx="43" cy="122" r="2.2"/><circle cx="44" cy="176" r="1.6"/><circle cx="43.5" cy="232" r="2"/><circle cx="156.5" cy="92" r="1.6"/><circle cx="156" cy="150" r="2.3"/><circle cx="157" cy="166" r="1.4"/><circle cx="156.5" cy="214" r="2"/><circle cx="92" cy="23.5" r="1.6"/><circle cx="118" cy="24" r="2"/><circle cx="74" cy="276.5" r="1.8"/><circle cx="124" cy="277" r="1.5"/>
             </g>
             <polyline points="40,56 50,48 47,42 58,34" fill="none" stroke="#e0896f" stroke-width="1.6"/>
             <circle cx="49" cy="46" r="13" fill="none" stroke="#e0896f" stroke-width="1" stroke-dasharray="3 3"/>
-            <line x1="152" y1="150" x2="190" y2="150" stroke="#e0896f" stroke-width="1"/>
-            <text x="196" y="140" fill="#e0896f" font-size="11" text-anchor="end">卡灰塵</text>
+            <line x1="159" y1="150" x2="178" y2="150" stroke="#e0896f" stroke-width="1"/>
+            <text x="182" y="146" fill="#e0896f" font-size="11">黑框下</text><text x="182" y="161" fill="#e0896f" font-size="11">卡灰塵</text>
           </svg>
         </div>
         <ul class="pts">
-          <li><i>✕</i><span>黑框內緣容易卡一圈灰塵，清不掉</span></li>
-          <li><i>✕</i><span>邊緣較容易破邊、裂角</span></li>
-          <li><i>✕</i><span>黑框會遮到螢幕邊緣的畫面</span></li>
-          <li><i>✕</i><span>較容易影響邊緣的觸控</span></li>
+          <li><i>✕</i><span>黑框正下方可能容易卡一圈灰塵</span></li>
+          <li><i>✕</i><span>邊緣可能較容易破邊、裂角</span></li>
+          <li><i>✕</i><span>黑框有可能會遮擋螢幕邊緣的畫面</span></li>
+          <li><i>✕</i><span>有可能影響邊緣的觸控</span></li>
         </ul>
       </article>
 
@@ -647,9 +670,9 @@ body{background:
             <text x="20" y="114" fill="#c9d3db" font-size="12">平面玻璃</text>
           </svg>
           <ol class="why-list bad">
-            <li><b>黑框遮住浮邊</b>邊緣沒有服貼，那一圈浮起來，只能用黑框遮住，也因此擋到畫面。</li>
-            <li><b>空隙卡灰塵</b>沒貼合就有空隙，灰塵從邊緣跑進去，清不掉。</li>
-            <li><b>懸空易破邊</b>邊緣底下是空的、沒有支撐，一碰撞就容易破邊。</li>
+            <li><b>黑框遮住浮邊</b>邊緣若沒有服貼，那一圈可能浮起來，需要用黑框遮住，也可能因此擋到畫面。</li>
+            <li><b>空隙卡灰塵</b>沒貼合的地方可能形成空隙，灰塵有機會從邊緣跑進去。</li>
+            <li><b>懸空易破邊</b>邊緣底下如果是空的、沒有支撐，碰撞時可能較容易破邊。</li>
           </ol>
         </figure>
         <figure class="why-panel ours">
@@ -861,28 +884,29 @@ body{background:
       <article class="cmp">
         <header><h3>常見包膜作法（較快速）</h3><span class="pill bad">它牌</span></header>
         <div class="fig wide">
-          <svg viewBox="0 0 320 206" role="img" aria-label="常見包膜示意：背面一張膜，側邊另外包一整圈邊條，邊條與背膜交接處多一層厚度">
+          <svg viewBox="0 0 320 206" role="img" aria-label="常見包膜示意：側邊另外包一整圈邊條，邊條覆蓋的整段都是兩層膜">
             <g transform="translate(14 14)">
               <rect x="0" y="0" width="84" height="162" rx="16" fill="#1a2027" stroke="#e0896f" stroke-width="6"/>
               <rect x="8" y="8" width="68" height="146" rx="11" fill="#c9d3db" fill-opacity=".14" stroke="#c9d3db" stroke-opacity=".5" stroke-width="1"/>
               <rect x="10" y="10" width="26" height="30" rx="8" fill="#0a0c0f" stroke="#5b6570"/>
               <text x="42" y="92" fill="#c9d3db" font-size="11" text-anchor="middle">背膜</text>
-              <text x="42" y="182" fill="#e0896f" font-size="11" text-anchor="middle">邊條包一整圈</text>
+              <text x="42" y="182" fill="#e0896f" font-size="11" text-anchor="middle">邊條整圈兩層膜</text>
             </g>
             <line x1="122" y1="20" x2="122" y2="176" stroke="rgba(168,210,232,.14)"/>
             <g transform="translate(118 10)">
               <path d="M20 48 H130 A32 32 0 0 1 162 80 V160" fill="none" stroke="#3a434d" stroke-width="14"/>
-              <path d="M20 37 H130 A43 43 0 0 1 160 49.6" fill="none" stroke="#c9d3db" stroke-width="3"/>
-              <path d="M144 36 A48 48 0 0 1 178 80 V160" fill="none" stroke="#e0896f" stroke-width="3"/>
-              <circle cx="156" cy="44" r="12" fill="none" stroke="#e0896f" stroke-width="1" stroke-dasharray="3 3"/>
+              <path d="M20 37 H130 A43 43 0 0 1 173 80 V160" fill="none" stroke="#c9d3db" stroke-width="3"/>
+              <path d="M108 32 H130 A48 48 0 0 1 178 80 V160" fill="none" stroke="#e0896f" stroke-width="3"/>
+              <path d="M108 25 H130 A55 55 0 0 1 185 80 V160" fill="none" stroke="#e0896f" stroke-width="1" stroke-dasharray="3 3" stroke-opacity=".7"/>
+              
               <text x="20" y="24" fill="#8f99a3" font-size="11">剖面</text>
-              <text x="178" y="20" fill="#e0896f" font-size="11" text-anchor="end">多一層</text>
+              <text x="196" y="20" fill="#e0896f" font-size="11" text-anchor="end">邊條整段兩層膜</text>
             </g>
           </svg>
         </div>
         <ul class="pts">
           <li><i>✕</i><span>背面貼完，側邊再另外上一整圈邊條</span></li>
-          <li><i>✕</i><span>邊條和背膜交接處多一層厚度</span></li>
+          <li><i>✕</i><span>邊條覆蓋的那一整段都是兩層膜，多一層厚度</span></li>
           <li><i>✕</i><span>背面和側邊分開貼，圖案不一定連貫</span></li>
         </ul>
       </article>
@@ -913,6 +937,7 @@ body{background:
           <li><i>✓</i><span>圖案從背面延續到側邊，完整連貫</span></li>
           <li><i>✓</i><span>薄薄一層，不影響散熱，也不卡殼</span></li>
           <li><i>✓</i><span>防止刮傷、氧化、掉漆、染色</span></li>
+          <li><i>✓</i><span>膜料拆除不殘膠<small><a class="reel" href="https://www.instagram.com/reel/Ddl1SKyTn8i/" target="_blank" rel="noopener">看拆膜實拍影片 →</a></small></span></li>
         </ul>
       </article>
     </div>
