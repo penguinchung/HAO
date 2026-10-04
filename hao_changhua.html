@@ -412,6 +412,52 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .reel{color:var(--ice);text-decoration:none;border-bottom:1px solid rgba(166,219,239,.4)}
 .reel:hover{border-bottom-color:var(--ice)}
 .foot-store{margin-left:6px;font-size:11px;opacity:.6}
+
+/* 鏡頭貼 */
+.lens-hero{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
+.lens-img{border-radius:16px;overflow:hidden;max-width:420px;justify-self:center;width:100%}
+.lens-img img{width:100%;height:auto;display:block;border-radius:16px}
+.lens-specs{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.ls{background:var(--panel);padding:18px;display:grid;gap:4px}
+.ls{align-content:start}.ls b{font-size:30px;font-weight:600;color:#e7b07a;font-variant-numeric:tabular-nums;line-height:1.2;min-height:1.2em;display:flex;align-items:baseline}
+.ls b small{font-size:15px;margin-left:2px;color:var(--muted)}
+.ls span{font-size:13px;color:var(--muted)}
+.lens-feats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+.lf{padding:18px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+.lf h4{margin:0 0 4px;font-size:16px}
+.lf p{margin:0;font-size:14px;color:var(--muted)}
+.lens-cmp{margin-top:28px}
+.lens-cmp h3{font-size:18px;margin-bottom:12px}
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px}
+.lens-cmp table{width:100%;border-collapse:collapse;font-size:14px}
+@media (max-width:560px){.lens-cmp th,.lens-cmp td{padding:10px;font-size:13px}.lens-cmp th:first-child{width:4.2em}}
+.lens-cmp th,.lens-cmp td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.lens-cmp tbody tr:last-child th,.lens-cmp tbody tr:last-child td{border-bottom:0}
+.lens-cmp thead th{font-size:13px;color:var(--muted);font-weight:600;background:var(--panel)}
+.lens-cmp thead th:last-child{color:var(--ice)}
+.lens-cmp table{table-layout:fixed}.lens-cmp th:first-child{width:5.5em}.lens-cmp tbody th{color:var(--fg);font-weight:600;white-space:nowrap}
+.lens-cmp tbody td{color:var(--muted)}
+.lens-cmp tbody td:last-child{color:var(--fg);background:rgba(166,219,239,.05)}
+.lens-cta{margin-top:20px;text-align:center}
+@media (max-width:760px){.lens-hero{grid-template-columns:1fr}.lens-feats{grid-template-columns:1fr}}
+
+/* 透光度實測 */
+.lens-test{display:grid;grid-template-columns:minmax(0,320px) 1fr;gap:28px;align-items:center;margin-top:24px;padding:20px;border:1px solid var(--line-strong);border-radius:16px;background:var(--ink)}
+.lt-vid{border-radius:12px;overflow:hidden;border:1px solid var(--line);aspect-ratio:9/16;background:var(--panel)}
+.lt-vid video{width:100%;height:100%;object-fit:cover;display:block}
+.lt-text{display:grid;gap:12px;min-width:0}
+.lt-text h3{font-size:clamp(20px,3.6vw,26px)}
+.lt-text p{margin:0;color:var(--muted);font-size:15px;line-height:1.8}
+.lt-text p b{color:#e7b07a;font-size:18px}
+.lt-list{list-style:none;margin:0;padding:0;display:grid;gap:8px;max-width:360px}
+.lt-list li{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;border-radius:8px;background:var(--panel);font-size:14px;color:var(--muted)}
+.lt-list b{font-size:20px;color:var(--fg);font-variant-numeric:tabular-nums}
+@media (max-width:760px){.lens-test{grid-template-columns:1fr}.lt-vid{max-width:300px;justify-self:center;width:100%}}
+.lens-hero{grid-template-columns:1fr}.lens-specs{grid-template-columns:repeat(4,1fr)}@media (max-width:760px){.lens-specs{grid-template-columns:1fr 1fr}}
+.lens-test{grid-template-columns:auto 1fr;align-items:stretch}
+.lens-test .lt-vid{aspect-ratio:1/1;width:clamp(200px,28vw,300px);height:auto;align-self:center}
+.lens-test .lt-text{align-content:center}
+@media (max-width:760px){.lens-test{grid-template-columns:1fr}.lens-test .lt-vid{width:100%;max-width:320px}}
 /* ===== 科技感強化 ===== */
 body{background:
   radial-gradient(1200px 520px at 80% -120px, rgba(166,219,239,.10), transparent 70%),
@@ -469,6 +515,7 @@ body{background:
     <a class="brand" href="#top"><img src="logo.png" alt="小豪包膜"><span><span class="bname">小豪包膜</span><small class="region">彰化</small></span></a>
     <ul>
       <li><a href="#glass">玻璃貼</a></li>
+      <li><a href="#lens">鏡頭</a></li>
       <li><a href="#wrap">包膜</a></li>
       <li><a href="#works">作品</a></li>
       <li><a href="#aftercare"><span class="lg">售後服務</span><span class="sm">售後</span></a></li>
@@ -873,6 +920,41 @@ body{background:
   </div>
 </section>
 
+<!-- LENS -->
+<section class="block" id="lens">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">鏡頭貼</p>
+      <h2>高透光拍照專用鏡頭</h2>
+    </div>
+
+    <div class="lens-hero">
+      <div class="lens-specs">
+        <div class="ls"><b>98.3<small>%</small></b><span>鏡頭級透光率，拍攝更清晰</span></div>
+        <div class="ls"><b>9<small>M</small></b><span>等級微晶玻璃，耐衝擊超越 9 公尺</span></div>
+        <div class="ls"><b>鋁鈦合金</b><span>結合 9M 等級微晶玻璃，打造太空梭般的堅固防護</span></div>
+        <div class="ls"><b>AR</b><span>抗反射塗層，提升透光率與影像清晰</span></div>
+      </div>
+    </div>
+
+    <div class="lens-test">
+      <div class="lt-vid"><video src="lens-test.mp4" poster="lens-test-poster.jpg" muted loop playsinline autoplay preload="metadata" aria-label="HAO 鏡頭貼透光度測試儀實測影片"></video></div>
+      <div class="lt-text">
+        <p class="eyebrow">透光度實測</p>
+        <h3>放上測試儀，數字自己說話</h3>
+        <p>用光譜透光度測試儀實際量測：HAO AR 航太級鏡頭保護貼的可見光透光率達 <b>98.3%</b>。</p>
+        <ul class="lt-list">
+          <li><span>可見光透光率</span><b>98.3%</b></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lens-cta">
+      <button type="button" class="btn primary" id="lensPrice">看鏡頭貼價目表</button>
+    </div>
+  </div>
+</section>
+
 <!-- WRAP -->
 <section class="block" id="wrap">
   <div class="wrap">
@@ -1160,6 +1242,12 @@ const LINE_URL = "https://lin.ee/P3PiSPZ";
       new IntersectionObserver(es => es.forEach(e => e.isIntersecting ? start() : stop()), { threshold: .3 }).observe(stage);
     } else start();
   })();
+
+  const lensBtn = document.getElementById("lensPrice");
+  if (lensBtn) lensBtn.addEventListener("click", () => {
+    const t = document.getElementById("tab-lens"); if (t) select(t);
+    document.getElementById("price").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+  });
   let opener = null;
   function openLb(src, alt, from){
     opener = from; lbImg.src = src; lbImg.alt = alt; lb.hidden = false; lb.scrollTop = 0;
