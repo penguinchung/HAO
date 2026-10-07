@@ -458,6 +458,20 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .lens-test .lt-vid{aspect-ratio:1/1;width:clamp(200px,28vw,300px);height:auto;align-self:center}
 .lens-test .lt-text{align-content:center}
 @media (max-width:760px){.lens-test{grid-template-columns:1fr}.lens-test .lt-vid{width:100%;max-width:320px}}
+
+
+/* 合作品牌 跑馬燈 */
+.brands{margin-top:32px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:16px}
+.brands-label{margin:0 0 12px;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;font-size:14px;font-weight:700;color:var(--fg);letter-spacing:.08em}
+.brands-label span{font-size:12px;font-weight:400;color:var(--muted);letter-spacing:.02em}
+.marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mq-track{list-style:none;margin:0;padding:0;display:flex;align-items:center;width:max-content;animation:mq 38s linear infinite}
+.mq-track li{flex:0 0 auto;display:flex;align-items:center;padding:0 28px;height:32px;font-size:17px;font-weight:700;letter-spacing:.04em;color:var(--fg);opacity:.72;white-space:nowrap;position:relative}
+.mq-track li::after{content:"";position:absolute;right:-2px;top:50%;width:4px;height:4px;border-radius:50%;background:var(--ice);opacity:.5;transform:translateY(-50%)}
+.mq-track img{height:14px;width:auto;opacity:.95}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media (max-width:560px){.mq-track li{padding:0 18px;font-size:15px}.mq-track img{height:12px}.mq-track{animation-duration:30s}}
+@media (prefers-reduced-motion:reduce){.mq-track{animation:none;flex-wrap:wrap;width:auto;justify-content:center}.mq-track li[aria-hidden]{display:none}.marquee{-webkit-mask-image:none;mask-image:none}}
 /* ===== 科技感強化 ===== */
 body{background:
   radial-gradient(1200px 520px at 80% -120px, rgba(166,219,239,.10), transparent 70%),
@@ -565,6 +579,12 @@ body{background:
         <p>手機殼、掛繩、行動電源等周邊配件，提供眾多品牌可選擇、訂購。</p>
       </div>
     </div>
+    <div class="brands" id="brands">
+      <p class="brands-label">合作品牌</p>
+      <div class="marquee" aria-label="合作品牌">
+        <ul class="mq-track"><li><img src="brand-mageasy.png" alt="MAGEASY" width="600" height="84"></li><li>UAG</li><li>hipporizz</li><li>JTLegend</li><li>Spigen</li><li>PLES</li><li>國家地理</li><li>Supcase</li><li>Allite</li><li>eiP</li><li>TORRAS 圖拉斯</li><li aria-hidden="true"><img src="brand-mageasy.png" alt="" width="600" height="84"></li><li aria-hidden="true">UAG</li><li aria-hidden="true">hipporizz</li><li aria-hidden="true">JTLegend</li><li aria-hidden="true">Spigen</li><li aria-hidden="true">PLES</li><li aria-hidden="true">國家地理</li><li aria-hidden="true">Supcase</li><li aria-hidden="true">Allite</li><li aria-hidden="true">eiP</li><li aria-hidden="true">TORRAS 圖拉斯</li></ul>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -660,7 +680,7 @@ body{background:
       <article class="cmp ours bracket">
         <header><h3>HAO 全透明玻璃貼</h3><span class="pill good">HAO</span></header>
         <div class="fig">
-          <svg viewBox="0 0 200 300" role="img" aria-label="HAO 全透明玻璃貼示意：無黑框，整個螢幕完整可見">
+          <svg viewBox="-18 0 236 300" role="img" aria-label="HAO 全透明玻璃貼示意：無黑框，整個螢幕完整可見">
             <defs>
               <linearGradient id="scr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#23394a"/><stop offset="1" stop-color="#162330"/></linearGradient>
               <linearGradient id="gl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a6dbef" stop-opacity="0"/><stop offset=".48" stop-color="#a6dbef" stop-opacity="0"/><stop offset=".5" stop-color="#a6dbef" stop-opacity=".18"/><stop offset=".6" stop-color="#a6dbef" stop-opacity="0"/></linearGradient>
