@@ -472,6 +472,19 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 @keyframes mq{to{transform:translateX(-50%)}}
 @media (max-width:560px){.mq-track li{padding:0 18px;font-size:15px}.mq-track img{height:12px}.mq-track{animation-duration:30s}}
 @media (prefers-reduced-motion:reduce){.mq-track{animation:none;flex-wrap:wrap;width:auto;justify-content:center}.mq-track li[aria-hidden]{display:none}.marquee{-webkit-mask-image:none;mask-image:none}}
+
+/* 鏡頭補充 */
+.lens-extra{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+.lx{position:relative;padding:20px 20px 18px;border:1px solid var(--line);border-radius:14px;background:var(--panel);display:grid;gap:8px;align-content:start}
+.lx-gift{border-color:rgba(231,176,122,.4);background:linear-gradient(135deg,rgba(231,176,122,.08),transparent 60%),var(--panel)}
+.lx h4{margin:0;font-size:16px;line-height:1.6}
+.lx p{margin:0;font-size:14px;line-height:1.7;color:var(--muted)}
+.lx .lx-note{display:flex;gap:6px;align-items:flex-start;font-size:13px;font-weight:600;line-height:1.6;color:var(--amber)}
+.lx .lx-note::before{content:"※";flex:0 0 auto}
+.lx-tag{justify-self:start;font-size:12px;font-weight:700;letter-spacing:.08em;padding:2px 10px;border-radius:999px;color:var(--ink);background:#e7b07a}
+.lx-tag.lx-q{background:var(--ice)}
+@media (max-width:760px){.lens-extra{grid-template-columns:1fr}}
+@media (max-width:520px){.material .mono{border:0;padding:0;text-align:left;font-size:18px;font-weight:700;letter-spacing:.06em}.material .d-br{display:none}}
 /* ===== 科技感強化 ===== */
 body{background:
   radial-gradient(1200px 520px at 80% -120px, rgba(166,219,239,.10), transparent 70%),
@@ -774,7 +787,7 @@ body{background:
 
 
     <div class="material bracket">
-      <div class="mono">高鋁<br>玻璃</div>
+      <div class="mono">高鋁<br class="d-br">玻璃</div>
       <p><b>玻璃本身就有差。</b>HAO 玻璃貼採用高鋁白玻璃（高鋁玻璃），<span class="hl">透光良好、還原螢幕原始色彩與亮度</span>，同時兼具<span class="hl">紮實、強韌</span>的基本優勢。真正的差異，藏在玻璃的材質和看不見的鍍膜工藝裡。</p>
     </div>
 
@@ -968,8 +981,18 @@ body{background:
       </div>
     </div>
 
-    <div class="lens-cta">
-      <button type="button" class="btn primary" id="lensPrice">看鏡頭貼價目表</button>
+    <div class="lens-extra">
+      <div class="lx lx-gift">
+        <span class="lx-tag">贈品</span>
+        <h4>選購高透光拍照專用鏡頭，贈全透明霧面專用底座保護貼</h4>
+        <p class="lx-note">圖案款底座另外加購</p>
+      </div>
+      <div class="lx">
+        <span class="lx-tag lx-q">Q</span>
+        <h4>已經貼好鏡頭，想加貼底座保護貼？</h4>
+        <p>我們的底座保護貼相容市面上約 95% 以上的鏡頭貼，已經貼好也不用拆除。</p>
+        <p class="lx-note">少數鏡頭貼本身較大，無法另外貼上</p>
+      </div>
     </div>
   </div>
 </section>
