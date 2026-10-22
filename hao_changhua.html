@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0a0c0f">
-<meta name="description" content="彰化包膜、全透明玻璃貼、鏡頭貼專門店，附作品實拍與完整價目表。">
-<meta property="og:title" content="小豪包膜 彰化｜包膜・全透明玻璃貼・鏡頭貼">
-<meta property="og:description" content="彰化包膜、全透明玻璃貼、鏡頭貼專門店，附作品實拍與完整價目表。">
-<title>小豪包膜 彰化｜包膜・全透明玻璃貼・鏡頭貼</title>
+<meta name="description" content="彰化包膜、全透明玻璃貼、鏡頭貼與選品配件專門店，附作品實拍與完整價目表。">
+<meta property="og:title" content="小豪包膜 彰化｜包膜・全透明玻璃貼・鏡頭貼・選品配件">
+<meta property="og:description" content="彰化包膜、全透明玻璃貼、鏡頭貼與選品配件專門店，附作品實拍與完整價目表。">
+<title>小豪包膜 彰化｜包膜・全透明玻璃貼・鏡頭貼・選品配件</title>
 <style>html{-webkit-text-size-adjust:100%}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
 
 
@@ -489,6 +489,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 @media (max-width:760px){.lens-extra{grid-template-columns:1fr}}
 @media (max-width:520px){.material .mono{border:0;padding:0;text-align:left;font-size:18px;font-weight:700;letter-spacing:.06em}.material .d-br{display:none}}
 .mq-track img.lg-tall{height:20px}@media (max-width:560px){.mq-track img.lg-tall{height:17px}}
+.store{margin-top:22px}
+.store-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.store-grid .zoom{all:unset;cursor:zoom-in;display:block;border:1px solid var(--line);border-radius:12px;overflow:hidden;aspect-ratio:4/3;background:var(--panel)}
+.store-grid .zoom:focus-visible{outline:2px solid var(--ice);outline-offset:2px}
+.store-grid img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.store-grid .zoom:hover img{transform:scale(1.03)}
+@media (max-width:640px){.store-grid{grid-template-columns:1fr 1fr}.store-grid .st-1{grid-column:1/-1}}
 /* ===== 科技感強化 ===== */
 body{background:
   radial-gradient(1200px 520px at 80% -120px, rgba(166,219,239,.10), transparent 70%),
@@ -593,7 +600,7 @@ body{background:
       </a>
       <div class="svc bracket">
         <span class="k">配件</span>
-        <h3>周邊配件</h3>
+        <h3>選品周邊配件</h3>
         <p>手機殼、掛繩、行動電源等周邊配件，提供眾多品牌可選擇、訂購。</p>
       </div>
     </div>
@@ -601,6 +608,14 @@ body{background:
       <p class="brands-label">合作品牌</p>
       <div class="marquee" aria-label="合作品牌">
         <ul class="mq-track"><li><img src="brand-mageasy.png" alt="MAGEASY" width="600" height="84"></li><li>UAG</li><li>hipporizz</li><li><img src="brand-jtlegend.png" alt="JTLegend"></li><li><img src="brand-spigen.png" class="lg-tall" alt="Spigen"></li><li>PLES</li><li>國家地理</li><li>Supcase</li><li>Allite</li><li>eiP</li><li>TORRAS 圖拉斯</li><li aria-hidden="true"><img src="brand-mageasy.png" alt="" width="600" height="84"></li><li aria-hidden="true">UAG</li><li aria-hidden="true">hipporizz</li><li aria-hidden="true"><img src="brand-jtlegend.png" alt=""></li><li aria-hidden="true"><img src="brand-spigen.png" class="lg-tall" alt=""></li><li aria-hidden="true">PLES</li><li aria-hidden="true">國家地理</li><li aria-hidden="true">Supcase</li><li aria-hidden="true">Allite</li><li aria-hidden="true">eiP</li><li aria-hidden="true">TORRAS 圖拉斯</li></ul>
+      </div>
+    </div>
+    <div class="store" aria-label="門市周邊展示">
+      <p class="brands-label">門市周邊展示</p>
+      <div class="store-grid">
+        <button type="button" class="zoom st-1" aria-label="放大查看門市周邊展示"><img src="store-1.jpg" alt="門市周邊展示：手機殼與掛繩陳列牆" width="1400" height="1050" loading="lazy"></button>
+        <button type="button" class="zoom" aria-label="放大查看門市周邊展示"><img src="store-2.jpg" alt="門市周邊展示：手機殼、掛繩與保護貼陳列" width="1400" height="1050" loading="lazy"></button>
+        <button type="button" class="zoom" aria-label="放大查看門市周邊展示"><img src="store-3.jpg" alt="門市周邊展示：Apple Watch 錶帶與保護殼陳列" width="1400" height="1050" loading="lazy"></button>
       </div>
     </div>
   </div>
