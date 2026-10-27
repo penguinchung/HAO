@@ -568,9 +568,14 @@ body{background:
   .work button:hover::after{animation:none}
 }
 /* 新機型區（首頁） */
-.nd-vid{border-radius:12px;overflow:hidden;border:1px solid var(--line);aspect-ratio:9/16;background:var(--panel);max-width:320px;width:100%}
+.newdev{padding-block:32px 8px}
+.nd-card{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center;padding:18px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}
+.nd-vid{width:150px;border-radius:10px;overflow:hidden;border:1px solid var(--line);aspect-ratio:9/16;background:var(--ink)}
 .nd-vid video{width:100%;height:100%;object-fit:cover;display:block}
-.nd-note{margin-top:16px;font-size:14px;color:var(--muted)}
+.nd-body{display:grid;gap:10px;min-width:0}
+.nd-body h3{font-size:24px}
+.nd-note{font-size:13px;color:var(--muted);line-height:1.7}
+@media (max-width:520px){.nd-card{gap:14px;padding:14px}.nd-vid{width:112px}.nd-body{gap:8px}.nd-body h3{font-size:20px}}
 </style>
 </head>
 <body>
@@ -609,17 +614,17 @@ body{background:
 </header>
 
 <!-- NEW DEVICE -->
-<section class="block newdev" id="duo">
+<section class="newdev" id="duo">
   <div class="wrap">
-    <div class="head">
-      <p class="eyebrow">新機型</p>
-      <h2>iPhone Duo</h2>
-      <p class="lead">內螢幕保護貼<br>外螢幕玻璃貼<br>鏡頭貼、手機殼<br>現場施工實拍，貼合前後直接看影片。</p>
-    </div>
-    <div class="nd-grid">
+    <div class="nd-card bracket">
       <div class="nd-vid"><video src="duo-demo.mp4" poster="duo-poster.jpg" muted loop playsinline autoplay preload="metadata" aria-label="iPhone Duo 施工前後實拍影片"></video></div>
+      <div class="nd-body">
+        <p class="eyebrow">新機型</p>
+        <h3>iPhone Duo</h3>
+        <div class="chips"><span>內螢幕保護貼</span><span>外螢幕玻璃貼</span><span>鏡頭貼</span><span>手機殼</span></div>
+        <p class="nd-note">現場施工實拍，貼合前後直接看影片。<br>其他型號、施工項目，歡迎 LINE 詢問。</p>
+      </div>
     </div>
-    <p class="nd-note">其他型號、施工項目，歡迎 LINE 詢問。</p>
   </div>
 </section>
 
