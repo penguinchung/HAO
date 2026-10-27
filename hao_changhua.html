@@ -575,6 +575,9 @@ body{background:
 .nd-body{display:grid;gap:10px;min-width:0}
 .nd-body h3{font-size:24px}
 .nd-note{font-size:13px;color:var(--muted);line-height:1.7}
+.nd-link{justify-self:start;font-size:14px;font-weight:700;color:var(--ice);text-decoration:none;border-bottom:1px solid var(--line-strong);padding-bottom:1px}
+.nd-link:hover{border-bottom-color:var(--ice)}
+a.nd-vid{display:block;cursor:pointer}
 @media (max-width:520px){.nd-card{gap:14px;padding:14px}.nd-vid{width:112px}.nd-body{gap:8px}.nd-body h3{font-size:20px}}
 </style>
 </head>
@@ -617,12 +620,13 @@ body{background:
 <section class="newdev" id="duo">
   <div class="wrap">
     <div class="nd-card bracket">
-      <div class="nd-vid"><video src="duo-demo.mp4" poster="duo-poster.jpg" muted loop playsinline autoplay preload="metadata" aria-label="iPhone Duo 施工前後實拍影片"></video></div>
+      <a class="nd-vid" href="https://www.instagram.com/reel/De6jmAJzw3r/" target="_blank" rel="noopener" aria-label="到 Instagram 觀看 iPhone Duo 完整影片"><video src="duo-demo.mp4" poster="duo-poster.jpg" muted loop playsinline autoplay preload="metadata" aria-label="iPhone Duo 施工前後實拍影片"></video></a>
       <div class="nd-body">
         <p class="eyebrow">新機型</p>
         <h3>iPhone Duo</h3>
         <div class="chips"><span>內螢幕保護貼</span><span>外螢幕玻璃貼</span><span>鏡頭貼</span><span>手機殼</span></div>
-        <p class="nd-note">現場施工實拍，貼合前後直接看影片。<br>其他型號、施工項目，歡迎 LINE 詢問。</p>
+        <p class="nd-note">現場施工實拍，貼合前後直接看影片。</p>
+        <a class="nd-link" href="https://www.instagram.com/reel/De6jmAJzw3r/" target="_blank" rel="noopener">到 IG 看完整影片 →</a>
       </div>
     </div>
   </div>
